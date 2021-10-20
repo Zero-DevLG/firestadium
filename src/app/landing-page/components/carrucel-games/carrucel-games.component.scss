@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@font-face {
+    font-family: truly;
+    src: url('../../../../assets/fonts/Truly.ttf');
+}
+
+.title{
+    position: relative;
+    text-align: center;
+    font-family: 'truly';
+    top: -40px;
+    color: #DEAB3C;
+    font-size:30px;
+}
+
+hr{
+    margin: auto;
+    width: 90%;
+    
+    height: 5px;
+    opacity: 1;
+}
+
+h1
+{
+    color: #DEAB3C;
+    font-size: 90px;
+}
+
+.img_cG{
+    width: 340px;
+    
+    margin: 0px;
+    cursor: pointer;
+    transition: 200ms all ease-in;
+    opacity: 0.6;
+
+}
+
+
+.swiper-container{
+    
+    width: 100%;
+    height: 800px;
+    padding-top: 70px !important;
+    padding-left: 30px !important;
+    padding-bottom: 30px !important;
+    /*background-color: crimson;*/
+}
+
+
+.img_cG:hover{
+    opacity: 1;
+    transform: scale(1.2);
+    filter: contrast(1.1);
+    z-index: 2;
+    
+
+}
+.carousel_games{
+    position: relative;
+    width: 90%;
+    height: 800px;
+    left:80px;
+    top: -70px;
+    margin: 0;
+}

@@ -1,0 +1,23 @@
+.modal-header , .modal-body, .modal-footer{
+    position: relative;
+    width: 100%;
+    background-color: #192228; 
+    font-family: 'truly';
+}
+.modal-body{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url('../../../../assets/img/LandinPage/body/f1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+   text-align: center;
+}
+
+
+
+#logoIn{
+    position: relative;
+    width: 60px;
+}

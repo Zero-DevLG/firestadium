@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('htpps://fonts.googleapis.com/css?family=Roboto:300');
+@font-face {
+    font-family: truly;
+    src: url("../../../../assets/fonts/Truly.ttf");
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url("../../../../assets/fonts/Roboto-Bold.ttf");
+  }
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+    overflow-x: hidden;
+}
+
+h1 
+{
+    text-align: center;
+    font-family: 'Roboto';
+    color: rgb(92, 92, 92);
+    font-size: 90px;
+}
+
+
+
+
+
+
+
+
+
+.content-1 .pr1 
+{
+    margin: auto;
+    margin-top: 20px;
+    max-width: 800px;
+    font-size: 20px;
+    margin-top: 40px;
+    
+}
+
+p {
+    font-family: 'Roboto';
+}
+
+h4 {
+    font-family: 'Roboto';
+}
+
+.content-icon-all
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+   
+}
+
+.content-1 h4 {
+    font-family: 'truly';
+}
+
+
+.content-1 p {
+    font-family: 'truly';
+}
+
+.content-icon{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: all 300ms;
+    margin: 20px;
+    margin-top: 40px;
+    font-family: 'truly';
+}
+
+.content-icon:hover{
+   
+    border-radius: 15px;
+    transform: scale(1.1);
+    background-color: rgba(54, 54, 54, 0.966);
+    color: white;
+}
+
+.content-icon img 
+{
+    width: 250px;
+    height: 220px;
+    border-radius: 10%;
+    box-shadow: 0px 0px 40px -10px black;
+
+}
+
+.content-icon h4
+{
+    margin-top: 20px;
+}
+
+.content-icon p
+{
+    margin-top: 20px;
+}
+
+hr
+{
+    border-top: 1px solid #4f4f4f;
+    border-bottom: 1px solid #4f4f4f;
+    border-left: none;
+    border-right: none;
+    height: 6px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#button_play{
+    position: relative;
+    width: 400px;
+    height: 280px;
+    cursor: pointer;
+}
+
+#button_play2{
+    position: relative;
+    top: 50px;
+    width: 300px;
+    height: 130px;
+    cursor: pointer;
+}
+
+.content-section{
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+

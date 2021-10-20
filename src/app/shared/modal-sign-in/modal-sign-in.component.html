@@ -1,0 +1,184 @@
+<ng-template #signIn>
+    <div class="modal-header">
+        <h1>Atrevete y Registrate</h1>   
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="left">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6>Llena todos los campos con tus datos para crear tu cuenta </h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Nombre(s)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Apellidos</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Nombre de usuario</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Correo" aria-label="Username">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" placeholder="Dominio(Gmail,Hotmail,Outlook,etc.)" style="font-size: 11px;" aria-label="Server">
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Contraseña</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Confirmar Contraseña</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Pregunta de seguridad</label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                          <option selected>Elige...</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Respuesta</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Fecha de nacimiento</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <label style="height: 60px;" class="input-group-text" for="inputGroupSelect01">País</label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                          <option selected>Elige...</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
+                            </div>
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-12">
+                                    <h6 id="dialog-1">Al utilizar los servicios de Fire Stadium garantizo que tengo al menos 18 años de edad y que estoy en pleno uso de mis facultades mentales al momento de utilizar esta aplicación</h6>
+                                </div>
+                            </div>
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-12">
+                                    <h6 id="dialog-1">Al dar click en crear cuenta, aceptas nuestras<a  (click)="simpleAlert()"> CONDICIONES DE USO Y TERMINOS DE PRIVACIDAD</a></h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-12">
+                                    <button class="btn btn-dark btn-xl button-reg" (click)="alertWithSuccess()">Crear Cuenta</button>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img id="right" src="../../../assets/img/singIn/fondo2.png" alt="">
+                </div>
+
+            </div>
+        </div>
+        
+        
+    </div>
+</ng-template>
+
+<ng-template #terms>
+    <div class="modal-header"></div>
+    <div class="modal-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita facilis illo voluptatum! Voluptatem amet voluptatum dolore voluptate voluptas. Voluptatem itaque magnam accusamus unde omnis placeat ipsam quibusdam? Molestias, minus.
+    Enim voluptatum ipsum sequi? Voluptatem, praesentium repellat. Consequuntur tempora nostrum harum eos ea facilis dolores qui obcaecati? Omnis facere itaque numquam deleniti pariatur eveniet placeat debitis, alias enim soluta nulla?
+    Consectetur aliquid maiores debitis optio repellendus omnis porro nobis velit quibusdam, nihil suscipit exercitationem mollitia ipsam provident? Perspiciatis voluptatum officia eaque explicabo consequuntur eum accusantium mollitia. Dolorum delectus autem veniam!
+    Saepe, impedit. Numquam illo tenetur voluptate veniam. Commodi, officiis? Quo nemo similique porro, debitis nesciunt ad at totam ea distinctio omnis cum odio, autem laudantium libero. Repellat id praesentium suscipit.
+    Laboriosam odit reiciendis nihil id asperiores quaerat dolorum quos molestiae, hic error aperiam necessitatibus nemo obcaecati possimus a voluptatum iure. Amet minima laboriosam aspernatur in corporis et voluptatibus natus possimus?
+    Vel eaque exercitationem quisquam ex. Tempore, ut sunt, officiis dolore, quam corrupti excepturi sint obcaecati quas repellendus ducimus iusto quasi suscipit aut ea sapiente doloribus molestiae ipsa ullam eos itaque?
+    Ratione praesentium provident quis perferendis obcaecati distinctio atque impedit doloribus in dolore eum nostrum ut hic consequatur id aut illum, facere quia? Quas ipsam molestiae omnis quasi, esse iure porro.
+    Officiis, iure quidem delectus sed, nihil odio nesciunt eaque mollitia beatae nulla possimus eum? Corrupti ex dolores aspernatur vitae atque doloremque neque placeat minima fugiat? Voluptatem et accusamus facilis adipisci!
+    Quos accusamus ratione laborum, hic repellendus itaque modi sapiente ab, fugiat, at saepe id officiis consequuntur corrupti ipsam maiores vitae quidem aperiam esse? Nihil qui minima doloremque possimus veniam. Quaerat.
+    Iste minima repellendus ab laudantium dolores dicta soluta quasi maiores. Nesciunt obcaecati minus facere. Voluptatum rem nihil quam commodi, sit quos optio modi in, quod accusantium sint temporibus, hic qui.
+    Nam consectetur necessitatibus ducimus ipsa cum et facere deserunt doloribus modi eligendi recusandae architecto beatae accusamus odit explicabo, tempora ipsum assumenda aut! Iste earum, itaque voluptas a quo molestiae mollitia.
+    Vitae quis alias ea fugiat, totam quod vel illum! Suscipit veritatis quae nesciunt culpa tempora dolorem eum qui nulla dignissimos, error repellendus voluptatem ratione at recusandae expedita ex doloribus. Modi!
+    Quod quasi, esse consequuntur eum voluptatem alias temporibus aliquid molestiae dolore ea aut at architecto? Accusamus obcaecati vel temporibus impedit fugiat? Recusandae fugit inventore expedita sunt obcaecati deserunt aliquam et.
+    Repudiandae tempore provident asperiores, odio ea at ipsam repellendus. Rerum assumenda reiciendis tenetur ipsa perspiciatis ipsum tempore eveniet blanditiis! Suscipit, sed? Quam aperiam dignissimos maiores nostrum vitae itaque velit accusantium!
+    Quas, quisquam, nam quidem rerum dicta, et odio dolore corrupti sint velit mollitia. Nostrum quod illum molestiae quae omnis eveniet animi neque ipsam aspernatur laborum vel, quidem, labore at sapiente!
+    A eveniet vero tempore neque recusandae facilis. Illo ipsum, nobis laudantium similique pariatur repudiandae magni cum! Amet iure sapiente quisquam optio corporis? Ex, illum a perspiciatis commodi ad praesentium placeat!
+    Dolor quos voluptates delectus tempore aliquam vitae nam nisi eos consequuntur suscipit obcaecati mollitia recusandae dolore, accusantium assumenda aperiam voluptatem rerum possimus in ipsam, vel voluptas. Sapiente, possimus. Impedit, quo.
+    Soluta dolorem laborum consectetur corrupti ratione. Cupiditate laudantium dolorem beatae iste accusantium nihil a saepe fugit harum rem, esse enim facere laborum amet expedita quam iure sed possimus aspernatur eius.
+    Enim in architecto nobis fuga blanditiis nesciunt repudiandae sint consequatur hic magni rem minus temporibus necessitatibus aliquid, eum unde dolor impedit, quas, non doloribus corrupti. Impedit tempora cum saepe. Eaque.
+    Sapiente maiores quis eius error eos exercitationem vel placeat, nam sit, et fugiat. Commodi aut mollitia deserunt fuga voluptatem dolorem fugit libero minima, fugiat similique, sint sed hic quod distinctio.
+    Nisi exercitationem consequatur velit voluptatem eaque tempore delectus dolore minus assumenda incidunt laborum quam quod, eius quasi nesciunt eveniet quis. Eligendi fuga magni, magnam maxime in voluptate recusandae atque cumque.
+    Aliquid nam fugit molestias. Earum sapiente ab blanditiis. A labore ratione aspernatur officia quisquam aperiam mollitia molestiae doloribus? Reprehenderit in totam dolorem doloribus? Quod et id deleniti ad, architecto molestias?
+    Veniam quis id ipsa veritatis perferendis explicabo blanditiis rerum aut nisi dignissimos doloremque quia modi quo perspiciatis consectetur, doloribus inventore officia similique debitis, culpa a quos exercitationem placeat. Aliquam, nulla.
+    Quibusdam sapiente suscipit minima maiores nulla, error voluptate pariatur sint! Molestiae ex minima inventore eligendi ab, optio dicta laudantium commodi delectus libero. Facilis explicabo consequuntur veniam ad sequi repudiandae dolores.
+    Explicabo quibusdam, sequi quo voluptas, in consequuntur doloribus libero ullam culpa soluta consequatur ad aliquid. Quaerat eaque voluptatum libero, ratione minima, iure animi at, odio aliquid fuga exercitationem voluptatem. Accusamus?
+    Illum saepe ab voluptas molestias deserunt sequi consectetur qui reprehenderit repellendus magni mollitia eos similique distinctio tempore, commodi sint velit harum. Sit iure dolore voluptates laudantium quaerat pariatur molestias ex.
+    Sapiente fugiat perspiciatis vel expedita et magni tenetur quos, possimus numquam quidem beatae nemo, corrupti suscipit voluptate, dolores voluptates. Earum magni eos at facilis recusandae corrupti esse odit quia et.
+    Temporibus, quam aliquam suscipit quas saepe iure eos dignissimos beatae voluptas, iusto odit quidem modi voluptate sapiente quia officiis voluptatibus et pariatur, repudiandae ut! Odit quia vel sapiente autem eligendi.
+    Animi amet sapiente deserunt nihil totam recusandae deleniti, temporibus placeat quibusdam rerum ex inventore vero quisquam harum sit excepturi nisi praesentium sunt odit atque facere ea molestias dolore et. Cum!
+    Accusamus nam, aliquid delectus rem, unde quod quibusdam molestiae ipsum dicta veniam, quo adipisci perspiciatis! Corporis asperiores temporibus suscipit repellat, blanditiis doloremque provident sit magni quod iusto molestias veniam vel.
+    Sint ipsa esse repellendus eum. Officia omnis tempora labore ipsa pariatur! Laudantium, sapiente ipsum vero quaerat architecto veniam dicta assumenda obcaecati, voluptatum, ipsa tempore necessitatibus eaque vitae ratione explicabo quis.
+    Velit ad est sapiente! Perferendis rem commodi temporibus! Nobis inventore, eos et error animi repellendus facilis distinctio quia, placeat, ipsa adipisci quibusdam doloribus officia voluptas aperiam. Culpa maxime architecto quasi?
+    Consequuntur repellendus, rem totam ullam illum velit eum laudantium maxime aut reiciendis fugit ea, ex eius. Tempore corporis maiores odio inventore consequatur! Eos a omnis autem quas, accusamus quaerat veritatis?
+    Error veniam velit explicabo inventore facere est, laborum repellat, numquam reiciendis ad nisi. Aliquid eum laborum commodi cum eos quam animi rem exercitationem! Adipisci, corrupti rerum quas est commodi eaque?
+    Excepturi eius provident exercitationem commodi voluptatibus, libero quod harum possimus soluta sit? Esse obcaecati, ullam fugiat officiis debitis delectus corrupti minima. Sapiente earum sequi nobis id, alias soluta voluptatum aliquam!
+    Ullam sed corporis dolores soluta, molestias ipsum! Labore qui molestias autem quod ipsum magnam consequuntur recusandae eaque error nobis. Ut nostrum deserunt obcaecati unde quam dolore rem! Molestias, facilis eos.
+    Suscipit provident distinctio illum unde maiores earum molestiae ad magnam, doloribus perspiciatis? Aliquam mollitia, possimus vel dolore commodi temporibus facilis repellat iste ullam quo facere accusamus suscipit perspiciatis dolores a!
+    Distinctio dolore, suscipit illo ratione perferendis tempora nihil itaque, enim architecto, quis amet a beatae fugit quaerat non aspernatur molestias deserunt! Reiciendis placeat et quisquam, consequatur aperiam voluptates possimus facilis.
+    Ipsum est quidem facere, illum alias saepe in vitae odit voluptatem laudantium cumque, cum minus asperiores, explicabo molestias tenetur perspiciatis ea itaque iste provident laboriosam consequuntur id! Dolores, magni deleniti.
+    Tempore natus recusandae molestiae. Tempore doloribus commodi sunt aperiam asperiores autem maxime explicabo quia nobis praesentium dolor et quis iusto quas id assumenda sequi fuga ullam natus ab, reiciendis cupiditate.</div>
+    <div class="modal-footer"></div>
+</ng-template>
+
+
+
+
+
+
+
+
+<button class="btn btn-dark btn-sm button-si" (click)="modal.open(signIn,{size: 'xl' })">Registrate</button>

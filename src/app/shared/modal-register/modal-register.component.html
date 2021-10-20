@@ -1,0 +1,58 @@
+
+<ng-template #contenido let-modal>
+ 
+    <div class="modal-body">
+                    <br>
+                    <img id="logoIn" src="../../../assets/img/logIn/logo.png" alt="">
+                    <br>
+                    <br>
+                    <div class="container-fluid">
+                        <div  class="row justify-content-md-center data-modal">
+                            <div class="col-md-8">
+                                <h3 id="dialog-0">Iniciar Sesión en FireStadium</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div  class="container-fluid">
+                        <div class="row justify-content-md-center data-modal">
+                            <div class="col-md-12">
+                                <h6 id="dialog-1">Aun no eres un miembro?<a href="#" (click)="modal.open(signIn)"> Registrate aquí</a></h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-md-center data-modal">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-logIn" placeholder="Nombre de usuario o Correo electronico">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-md-center data-modal">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-logIn" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-md-center data-modal">
+                            <div class="col-md-6">
+                                <input type="checkbox"> <label class="dialog-2-1">Mantener Sesión activa</label>
+                            </div>
+                            <div class="col-md-6">
+                               <a class="dialog-2" href="#">¿Has olvidado la contraseña?</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-md-center data-modal-2">
+                            <div class="col-md-12">
+                                <button class="btn btn-lg btn-light">INICIA SESIÓN</button>
+                            </div>
+                         
+                        </div>
+                    </div>
+                    
+                    
+             
+    </div>
+
+</ng-template>
+<button class="btn btn-dark  button-li" (click)="modal.open(contenido)">Iniciar Sesión</button>

@@ -1,0 +1,71 @@
+
+<ng-template #contenido let-modal>
+    
+    <div class="modal-header">
+        <br>
+        <img id="logoIn" src="../../../assets/img/logIn/logo.png" alt="">
+        <br>
+    </div>
+    <div class="modal-body">
+                    <div class="container-fluid">
+                        <div  class="row justify-content-md-center data-modal">
+                            <div class="col-md-8">
+                                <h4 id="dialog-0">Crear una nueva partida</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div  class="container-fluid">
+                        <br>
+                        <div class="row justify-content-center  data-modal">
+                            <div class="col-md-6">
+                                <label for="">Selecciona el juego:</label>
+                                <select class="form-control" name="" id="">
+                                    <option value="">Madden 22</option>
+                                    <option value="">FIFA 22</option>
+                                    <option value="">FORNITE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <div class="row justify-content-center data-modal">
+                            <div class="col-md-6">
+                                <label for="">Selecciona la modalidad:</label>
+                                <select class="form-control" name="" id="">
+                                    <option value="">Ultimate Team - Draft</option>
+                                    <option value="">Clasico</option>
+                                    <option value="">1 vs 1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center  data-modal">
+                            <div class="col-md-6">
+                                <label for="">Monto de Apuesta:</label>
+                                <div class="input-group mb-1">
+                                    <span class="input-group-text">$</span>
+                                <input type="text" class="form-control"  value="50" >    
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row justify-content-md-center data-modal-2">
+                            <div class="col-md-12">
+                                <button style="text-align: center;" class="btn btn-lg btn-dark">CREAR PARTIDA</button>
+                            </div>
+                         
+                        </div>
+                    </div>
+                    
+                    
+             
+    </div>
+    <div class="modal-footer">
+        
+    </div>
+
+</ng-template>
+<button class="btn btn-dark  button-li" (click)="modal.open(contenido)">+ Crear Partida</button>
+

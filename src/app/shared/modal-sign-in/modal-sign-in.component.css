@@ -1,0 +1,69 @@
+.button-si{
+    position: relative;
+    font-size: 20px;
+    border-radius: 0px;    
+    border: #dbb81d 1px solid;
+    color: #dbb81d;
+    transition: all 100ms ease-in;
+}
+
+.button-si:hover{
+    filter:contrast(3.5);
+}
+
+.modal-body{
+    position: relative;
+    display: flex;
+}
+
+.modal-header{
+    text-align: center;
+}
+
+.modal-header h1{
+    position: relative;
+    left: 35%;
+}
+
+#left{
+    position: relative;
+    font-size:12px;
+    
+    
+
+}
+
+#terms{
+    position: relative;
+    font-size: 9px;
+    
+}
+
+
+.my-custom-class {
+  background: aliceblue;
+  font-size: 125%;
+}
+.my-custom-class .arrow::after {
+  border-top-color: aliceblue;
+}
+
+#right{
+   position: relative;
+   width: 100%;
+ 
+}
+#dialog-1{
+    position: relative;
+    font-size: 11px;
+}
+
+#dialog-1 a {
+    cursor: pointer;
+    color: rgb(180, 158, 29);
+}
+
+.button-reg{
+    position: relative;
+    left: 40%;
+}

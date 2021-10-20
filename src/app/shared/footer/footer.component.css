@@ -1,0 +1,48 @@
+@font-face {
+    font-family: truly;
+    src: url("../../../assets/fonts/Truly.ttf");
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url("../../../assets/fonts/Roboto-Bold.ttf");
+  }
+
+.footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: rgb(204, 204, 204);
+        padding-top: 50px;
+        padding-left: 0px;
+        align-items: center;
+        text-align: center;
+        font-family: 'Roboto';
+}
+
+#logo-footer{
+    position: relative;
+    width: 300px;
+    top: -10px;
+}
+
+#social-networks{
+    position: relative;
+    width: 100%;
+    display: flex;
+    left: auto;
+    margin: auto;
+    align-items: center;
+}
+
+ p{
+    font-size: 12px;
+}
+
+.network-icons{
+    position: relative;
+    width: 60px;
+    left: 35%;
+    cursor: pointer;
+}
+

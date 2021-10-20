@@ -1,0 +1,89 @@
+.modal-header , .modal-body, .modal-footer{
+    position: relative;
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.modal-body{
+    position: relative;
+    text-align: center;
+    height: 600px;
+}
+
+.close{
+    position: relative;
+    left: 96%;
+}
+
+.data-modal{
+    position: relative;
+    width: 100%;
+}
+
+
+.data-modal-2{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.data-modal-2 button{
+    position: relative;
+    width: 400px;
+    
+    border-radius: 15px;
+}
+
+#logoIn{
+    position: relative;
+    width: 60px;
+}
+#dialog-0{
+    font-size: 20px;
+}
+
+#dialog-1{
+    font-size: 12px;
+}
+
+#dialog-1 a{
+    color: rgb(180, 156, 21);
+}
+
+.dialog-2 {
+    color: rgb(180, 156, 21);
+    font-size: 12px;
+}
+
+.dialog-2-1 {
+    position: relative;
+    color: white;
+    left: 5px;
+    font-size: 12px;
+}
+
+
+.input-logIn{
+  
+    position: relative;
+    left: -80px;
+    width: 400px;
+    border-radius: 15px;
+
+}
+
+.button-li{
+    font-size: 20px;
+    border-radius: 0px;
+    border: white 1px solid;
+    transition: all 100ms ease-in;
+}
+
+.button-li:hover{
+    filter: contrast(1.5);
+}
+
