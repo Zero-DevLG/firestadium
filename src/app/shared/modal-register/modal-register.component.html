@@ -21,15 +21,16 @@
                             </div>
                         </div>
                         <br>
+                       
                         <div class="row justify-content-md-center data-modal">
                             <div class="col-md-6">
-                                <input type="text" class="form-control input-logIn" placeholder="Nombre de usuario o Correo electronico">
+                                <input type="text" class="form-control input-logIn" [(ngModel)]="user" placeholder="Correo electronico">
                             </div>
                         </div>
                         <br>
                         <div class="row justify-content-md-center data-modal">
                             <div class="col-md-6">
-                                <input type="text" class="form-control input-logIn" placeholder="Contraseña">
+                                <input type="password" [(ngModel)]="password" class="form-control input-logIn" placeholder="Contraseña">
                             </div>
                         </div>
                         <br>
@@ -44,10 +45,11 @@
                         <br>
                         <div class="row justify-content-md-center data-modal-2">
                             <div class="col-md-12">
-                                <button class="btn btn-lg btn-light">INICIA SESIÓN</button>
+                                <button (click)="logIn(user,password)"  class="btn btn-lg btn-light">INICIA SESIÓN</button>
                             </div>
                          
                         </div>
+                   
                     </div>
                     
                     

@@ -14,6 +14,11 @@ import { UserPageModule } from './user-page/user-page.module';
 import { SidebarModule } from 'ng-sidebar';
 import { LoobyPageComponent } from './looby-page/looby-page.component';
 import { LoobyPageModule } from './looby-page/looby-page.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -27,12 +32,15 @@ import { LoobyPageModule } from './looby-page/looby-page.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     LandingPageModule,
     UserPageModule,
     LoobyPageModule,
     NgbModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@
         <h1>Atrevete y Registrate</h1>   
     </div>
     <div class="modal-body">
+    <form (submit)="submit()" [formGroup]="formReg"  action="">  
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
@@ -12,47 +13,97 @@
                                 <div class="col-md-12">
                                     <h6>Llena todos los campos con tus datos para crear tu cuenta </h6>
                                 </div>
+                             
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="email" class="form-control" formControlName="name" id="floatingInput" placeholder="name@example.com">
                                         <label for="floatingInput">Nombre(s)</label>
+                                        <div *ngIf="formReg.get('name')?.invalid && (formReg.get('name')?.dirty || formReg.get('name')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('name')?.errors?.required">
+                                                El nombre(s) es requerido
+                                            </div>
+                                        </div>   
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="email" class="form-control" formControlName="lastName" id="floatingInput" placeholder="name@example.com">
                                         <label for="floatingInput">Apellidos</label>
+                                        <div *ngIf="formReg.get('lastName')?.invalid && (formReg.get('lastName')?.dirty || formReg.get('lastName')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('lastName')?.errors?.required">
+                                                El apellido(s) es requerido
+                                            </div>
+                                        </div>   
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="email" class="form-control" id="floatingInput" formControlName="userName" placeholder="name@example.com">
                                         <label for="floatingInput">Nombre de usuario</label>
+                                        <div *ngIf="formReg.get('userName')?.invalid && (formReg.get('userName')?.dirty || formReg.get('userName')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('userName')?.errors?.required">
+                                                El nombre de usuario es requerido
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Correo" aria-label="Username">
+                                        <input type="text" class="form-control" placeholder="Correo" formControlName="email" aria-label="Username">
                                         <span class="input-group-text">@</span>
-                                        <input type="text" class="form-control" placeholder="Dominio(Gmail,Hotmail,Outlook,etc.)" style="font-size: 11px;" aria-label="Server">
-                                      </div>
+                                        <input type="text" class="form-control" placeholder="Dominio(Gmail,Hotmail,Outlook,etc.)" formControlName="email_dns" style="font-size: 11px;" aria-label="Server">
+                                        
+                                        
+                                    </div>
+                                    <div *ngIf="formReg.get('email')?.invalid && (formReg.get('email')?.dirty || formReg.get('email')?.touched)" class="alert alert-danger">
+                                        <div *ngIf="formReg.get('email')?.errors?.required">
+                                            El email es requerido
+                                        </div>
+                                    </div> 
+                                    <div *ngIf="formReg.get('email_dns')?.invalid && (formReg.get('email_dns')?.dirty || formReg.get('email_dns')?.touched)" class="alert alert-danger">
+                                        <div *ngIf="formReg.get('email_dns')?.errors?.required">
+                                            El dominio del email es requerido
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="password" class="form-control" id="floatingInput" formControlName="password" placeholder="name@example.com">
                                         <label for="floatingInput">Contraseña</label>
+                                        <div *ngIf="formReg.get('password')?.invalid && (formReg.get('password')?.dirty || formReg.get('password')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('password')?.errors?.required">
+                                                    La contraseña es requerida
+                                            </div>
+                                            <div *ngIf="formReg.get('password')?.errors?.minlength">
+                                                     Se requiere una contraseña con un minimo de 8 caracteres
+                                            </div>
+                                            <div *ngIf="formReg.get('password')?.errors?.passwordValidation">
+                                                {{ password?.errors?.passwordValidation.message }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="password" class="form-control" id="floatingInput" formControlName="r_password" placeholder="name@example.com">
                                         <label for="floatingInput">Confirmar Contraseña</label>
+                                        <div *ngIf="formReg.get('r_password')?.invalid && (formReg.get('r_password')?.dirty || formReg.get('r_password')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('r_password')?.errors?.required">
+                                                Es necesario volver a confirmar la contraseña
+                                            </div>
+                                            <div *ngIf="formReg.get('r_password')?.errors?.r_passwordValidation">
+                                                {{ r_password?.errors?.r_passwordValidation.message }}
+                                            </div>
+                                            <div *ngIf="checkIfMatchingPasswords">
+                                                Las contraseñas no coinciden
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -60,39 +111,58 @@
                                 <div class="col-md-12">
                                     <div class="input-group mb-3">
                                         <label class="input-group-text" for="inputGroupSelect01">Pregunta de seguridad</label>
-                                        <select class="form-select" id="inputGroupSelect01">
-                                          <option selected>Elige...</option>
-                                          <option value="1">One</option>
-                                          <option value="2">Two</option>
-                                          <option value="3">Three</option>
+                                        <select class="form-select" id="inputGroupSelect01" formControlName="qstion">
+                                          <option selected value="0">Elige...</option>
+                                          <option *ngFor = "let item of question" [value]="item.id">{{ item.description }}</option>
                                         </select>
+                                        <div *ngIf="formReg.get('qstion')?.invalid && (formReg.get('qstion')?.dirty || formReg.get('qstion')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('qstion')?.errors?.required">
+                                                Favor de seleccionar una pregunta
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="floatingInput" formControlName="r_qstion" placeholder="name@example.com">
                                         <label for="floatingInput">Respuesta</label>
+                                        <div *ngIf="formReg.get('r_qstion')?.invalid && (formReg.get('r_qstion')?.dirty || formReg.get('r_qstion')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('r_qstion')?.errors?.required">
+                                                Es necesario responder a la pregunta secreta
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <input type="date" min="1970-12-31" max="2003-10-23" class="form-control" id="floatingInput" formControlName="date_b" placeholder="name@example.com">
                                         <label for="floatingInput">Fecha de nacimiento</label>
+                                        <div *ngIf="formReg.get('date_b')?.invalid && (formReg.get('date_b')?.dirty || formReg.get('date_b')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('date_b')?.errors?.required">
+                                                Favor de seleccionar una fecha de nacimiento valida
+                                            </div>
+                                            <div *ngIf="checkIfDate">
+                                                Favor de seleccionar una fecha de nacimiento valida
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-group mb-3">
                                         <label style="height: 60px;" class="input-group-text" for="inputGroupSelect01">País</label>
-                                        <select class="form-select" id="inputGroupSelect01">
-                                          <option selected>Elige...</option>
-                                          <option value="1">One</option>
-                                          <option value="2">Two</option>
-                                          <option value="3">Three</option>
+                                        <select   class="form-select" id="inputGroupSelect01" formControlName="country">
+                                            <option  value="0" selected>Elige...</option> 
+                                            <option *ngFor = "let item of paises" [value]="item.id">{{ item.name }}</option>
                                         </select>
+                                        <div *ngIf="formReg.get('country')?.invalid && (formReg.get('country')?.dirty || formReg.get('country')?.touched)" class="alert alert-danger">
+                                            <div *ngIf="formReg.get('country')?.errors?.required">
+                                                Seleccione un pais
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
             
@@ -110,12 +180,13 @@
                             <br>
                             <div class="row justify-content-md-center">
                                 <div class="col-md-12">
-                                    <button class="btn btn-dark btn-xl button-reg" (click)="alertWithSuccess()">Crear Cuenta</button>
+                                    <button class="btn btn-dark btn-xl button-reg"  [disabled]="formReg.invalid">Crear Cuenta</button>
                                 </div>
                             </div>
+                          
                             <br>
                         </div>
-                        
+                     
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -124,9 +195,10 @@
 
             </div>
         </div>
+    </form>  
         
         
-    </div>
+</div>
 </ng-template>
 
 <ng-template #terms>

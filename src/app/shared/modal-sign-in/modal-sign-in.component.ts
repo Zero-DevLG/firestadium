@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
+import { HttpClient, HttpParams } from '@angular/common/http';
+
+
+import { Country } from './interfaces/country_interface';
+import { Question } from './interfaces/secretQuestion_interface';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { passwordValidation } from './validations/password-validation.directive';
+import { r_passwordValidation } from './validations/re-password-validation.directive';
+
 
 @Component({
   selector: 'app-modal-sign-in',
@@ -8,11 +17,181 @@ import Swal from 'sweetalert2';
   styleUrls: ['./modal-sign-in.component.css']
 })
 export class ModalSignInComponent implements OnInit {
+  private serviceUrl = 'https://assolutions.mx/WebApiFireStadium/api/General/GetCountryList';
+  public paises: Country[] = [];
+  public date_m:number = 0;
+  public question: Question[] = [];
+  public formReg = new FormGroup({});
+ 
+  private headers = { 'apitoken':'Uav1/CXzbG00TW7Id8q483Ov/nURpJ5ktsessA00wCo='}
+ 
+  constructor( public modal:NgbModal, private http: HttpClient, public formBuilder: FormBuilder) { 
 
-  constructor( public modal:NgbModal) { }
+   
+  }
+
+
+  get password(){
+    return this.formReg.get('password');
+  }
+
+  get r_password(){
+    return this.formReg.get('r_password');
+  }
+
+  get date_b(){
+    return this.formReg.get('date_b');
+  }
+
+  checkIfMatchingPasswords(password: string, r_password: string) {
+    return (group: FormGroup) => {
+      let passwordInput = group.controls[password],
+          passwordConfirmationInput = group.controls[r_password];
+      if (passwordInput.value !== passwordConfirmationInput.value) {
+        return passwordConfirmationInput.setErrors({notEquivalent: true})
+      }
+      else {
+          return passwordConfirmationInput.setErrors(null);
+      }
+    }
+  }
+
+
+  
+
+  checkIfDate(date_b: string){
+    return(group: FormGroup) =>{
+      let date_b2 = group.controls[date_b];
+      var today = new Date();
+      var birthday = new Date(date_b2.value);
+      var edad = today.getFullYear() - birthday.getFullYear();
+      var m = today.getMonth() - birthday.getMonth();
+
+      if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+        edad--;
+    }
+
+    if(edad > 18){
+      return date_b2.setErrors({notEquivalent: true});
+    }else{
+      return date_b2.setErrors(null);
+    }
+
+    }
+  }
 
   ngOnInit(): void {
+
+    /////FORMUARIO REACTIVO
+    
+
+    this.formReg = this.formBuilder.group({
+
+      name:       ['',Validators.required],
+      lastName:   ['',Validators.required],
+      userName:   ['',Validators.required],
+      email:      ['',Validators.required],
+      email_dns:  ['',Validators.required],
+      password:   ['',[Validators.required,Validators.minLength(8), passwordValidation()]],
+      r_password: ['',[Validators.required,r_passwordValidation()]],
+      qstion:     ['0',Validators.required],
+      r_qstion:   ['',Validators.required],
+      date_b:     ['',Validators.required],
+      country:    ['0',Validators.required]
+
+    },{validator: [this.checkIfMatchingPasswords('password', 'r_password'),this.checkIfDate('date_b')]});
+
+
+    ///APIS
+
+    this.getCountry();
+    this.getQuestions();
   }
+
+  getCountry(){
+    const url = this.serviceUrl;
+    const headers = this.headers;
+    
+    this.http.get(url, { headers }).subscribe((resp) =>{
+     let err = Object.values(resp);
+     this.paises = Object.values(err[0]);
+    });
+  }
+
+
+  getQuestions(){
+    const url = 'https://assolutions.mx/WebApiFireStadium/api/Security/GetSecretQuestionList';
+    const headers = this.headers;
+    this.http.get(url,{ headers}).subscribe((resp2)=>{
+      let err = Object.values(resp2);
+      this.question = Object.values(err[0]);
+      console.log(this.question);
+      
+    });
+  }
+
+
+  submit(){
+    console.log(this.formReg.value);
+    let g = this.formReg.value;
+    let n_mail = `${g.email}@${g.email_dns}`;
+      const headers = this.headers;
+      const url = 'https://assolutions.mx/WebApiFireStadium/api/Security/RegisterUser';
+      const body= {
+        
+        /*
+          "Names" : "Jose Alberto",
+          "LastNames" : "Sanchez Quintero",
+          "BirthDate" : "1980-11-02",
+          "UserName": "jhez2021",
+          "Password": "Casa_123",
+          "Email" : "emailsdsa@gmail.com",
+          "CountryId":"1bfbad51-7b90-4b88-b9ac-16269e369d95",
+          "SecretQuestionId": "3fdaa831-5e58-4ac9-aa6d-372dde586726",
+          "SecretAnswer":"San Cristobal"
+      
+        */
+        
+        "Names" : g.name,
+        "LastNames": g.lastName,
+        "BirthDate": g.date_b,
+        "UserName": g.userName,
+        "Password":g.password,
+        "Email":n_mail,
+        "CountryId":g.country,
+        "SecretQuestionId":g.qstion,
+        "SecretAnswer":g.r_qstion
+        
+    }
+
+    console.log(body);
+    this.http.post(`${url}`,body, { headers }).subscribe( (resp) => {
+      Swal.fire('Gracias...', 'Sus datos se registraron con exito! <br>Por favor activa tu cuenta desde el email que acabamos de enviarte', 'success');
+    }, error =>{
+      Swal.fire('Error', 'Error al enviar datos', 'error');
+    });
+     
+
+
+    
+/*
+      this.formReg.patchValue({
+      name:       '',
+      lastName:   '',
+      userName:   '',
+      email:      '',
+      email_dns:  '',
+      password:   '',
+      r_password: '',
+      qstion:     '0',
+      r_qstion:   '',
+      date_b:     '',
+      country:    '0'
+      });
+
+      */
+  }
+
 
   simpleAlert(){
     Swal.fire(`
@@ -93,3 +272,7 @@ export class ModalSignInComponent implements OnInit {
   }
 */
 }
+function controlsConfig(controlsConfig: any, arg1: {}): FormGroup {
+  throw new Error('Function not implemented.');
+}
+
