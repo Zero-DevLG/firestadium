@@ -8,10 +8,16 @@ import { LoobyPageComponent } from './looby-page/looby-page.component';
 
 const routes: Routes = [
   
-  {path:'',component:LandingPageComponent},
-  {path:'users',component:UserPageComponent},
-  {path:'lobby',component:LoobyPageComponent},
-  {path:'**', redirectTo:''}
+  {
+    path:'',component:LandingPageComponent
+  },
+  {
+    path: 'dashboard',
+    loadChildren: ()=> import('./protected/protected.module').then(m => m.ProtectedModule)
+  },
+  {
+    path:'**', redirectTo:''
+  }
 ];
 
 @NgModule({

@@ -17,6 +17,8 @@ import { LoobyPageModule } from './looby-page/looby-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './protected/dashboard/dashboard.component';
+
 
 
 
@@ -28,19 +30,19 @@ import { ReactiveFormsModule } from '@angular/forms';
     ModalSignInComponent,
     FooterComponent,
     UserPageComponent,
-    LoobyPageComponent
+    LoobyPageComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     LandingPageModule,
-    UserPageModule,
     LoobyPageModule,
     NgbModule,
     SidebarModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,637 @@
+@font-face {
+    font-family: 'Roboto';
+    src: "../fonts/Roboto-Bold.ttf";
+  }
+
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 910px;
+    background-color: #070a10;
+    font-family: 'Roboto';
+    overflow-x: hidden;
+    overflow-y: hidden;
+ 
+}
+
+
+
+.container-pages{
+    position: relative;
+    width: 100%;
+    height: 1200px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#loading{
+    position: relative;
+    top: 45%;
+    left: 45%;
+    width: 300px;
+    height: 300px;
+    z-index: 3;
+    display: none;
+}
+
+.navbar{
+    background-color: #192228 !important;
+    color: white !important;
+    width: 100% !important;
+    z-index: 1;
+    border-bottom: 2px solid rgb(226, 178, 19);
+}
+
+#logo-nav{
+    width: 220px;
+    height: 20px;
+}
+
+
+.nav-link{
+    color: white !important; 
+}
+
+/* SIDEBAR */
+.side-bar{
+    position: absolute;
+    background-color: #151e23;
+    border-right: 2px solid rgb(226, 178, 19) ;
+    width: 95px;
+    min-height: 1000px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 0;
+    padding: 15px;
+    z-index: 2;
+    transition: all ease-in 100ms;
+}
+
+.s-active{
+  
+  
+}
+ul{
+    margin: 0;
+    padding: 0;  
+    left: -20px;   
+}
+
+
+ a{
+    text-decoration: none;
+  
+}
+.side-option{
+    display: flex; 
+}
+
+.text-option{
+    position: relative;
+    left: 35px;
+    top: 15px;
+    color: white;
+    display: none;
+    transition: all ease-in 300ms;
+    
+}
+
+.text-option:hover{
+    color: violet;
+}
+
+.link-option{
+    color: white;
+    transition: all ease-in 300ms;
+}
+
+.link-option:hover{
+    color: #02daff;
+}
+
+
+.text-option a{
+    color: white;
+}
+
+.hr-side{
+    color: rgb(226, 178, 19);
+}
+
+
+
+.img-side{
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: 10px;
+    width: 50px;
+    filter: saturate(0.8);
+    cursor: pointer;
+    transition: all ease-in 300ms;
+    
+}
+
+.img-side:hover{
+    filter: saturate(4.5);
+   /*transform: scale(1.2); */
+
+}
+
+.dropdown-toggle{
+    border: 1px solid rgb(226, 178, 19) ;
+    color: rgb(226, 178, 19);
+    background-color:#192228 !important
+}
+
+.dropdown-menu{
+    background-color: black;
+    border: 1px solid white;
+}
+
+.dropdown-menu ul li{
+    border-top: 1px solid white;
+    color: white;
+}
+.dropdown-menu ul li a{
+    text-decoration: none;
+    color: white !important;
+}
+
+.list-nav{
+    text-align: center;
+}
+
+
+
+.text-nav{
+    color: white;
+}
+
+.text-nav:hover{
+    color: rgb(226, 178, 19) !important;
+}
+
+#logout{
+    color: red;
+}
+
+.dropdown-toggle:hover{
+    filter: saturate(5.5) !important;
+    background-color: black !important;
+}
+
+.nav-item{
+    padding-left: 20px !important;
+    text-align: center !important;
+}
+
+#avatar-navbar{
+    width:35px; 
+    position: relative; 
+    top: -5px;
+    
+}
+
+#hr-v{
+    width: 5px;
+    height: 30px;
+    border-right: 3px solid rgb(153, 153, 153);
+}
+
+/* END */ 
+
+#data{
+    position: absolute;
+    display: flex;
+    top: 100px;
+    left: 120px;
+    width: 90%;
+    margin: 5px;
+   
+   
+}
+
+
+#navbarDropdown{
+    color: #dbbe19;
+}
+
+.col-md-10{
+    padding: 25px;
+    text-align: center;
+}
+
+
+.col-md-12{
+    padding: 25px;
+    text-align: center;
+}
+
+.col-md-8{
+    overflow-y: auto;
+}
+
+#user-info{
+    position: relative;
+    top: 50px;
+    left: 30%;
+    width: 800px;
+    background-color: #253844;
+    color: #02daff;
+    font-family: 'Roboto';
+    font-size: 19px;
+    padding: 10px;
+}
+
+
+.name-c{
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+
+#ps{
+    border: 1px solid rgb(50, 53, 206);
+    color: rgb(50, 53, 206);
+    padding: 5px;
+    background-color: #1c292f;
+    width: 70px !important;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#ps:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+
+#xbox{
+    border: 1px solid green;
+    color: green;
+    background-color: #1c292f;
+    width: 70px;
+    padding: 5px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#xbox:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+#nintendo{
+    border: 1px solid rgb(192, 49, 49);
+    color: rgb(192, 49, 49);
+    background-color: #1c292f;
+    width: 70px;
+    padding: 5px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#nintendo:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+#pc{
+    border: 1px solid rgb(240, 240, 240);
+    color: rgb(240, 240, 240);
+    background-color: #1c292f;
+    width: 70px;
+    padding: 5px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#pc:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+#ps2{
+    border: 1px solid rgb(50, 53, 206);
+    color: rgb(50, 53, 206);
+    background-color: #1c292f;
+    width: 120px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    filter: saturate(0);
+}
+
+#ps2:hover{    
+    filter: saturate(5.5);
+}
+
+
+#xbox2{
+    border: 1px solid green;
+    color: green;
+    background-color: #1c292f;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: saturate(0);
+}
+
+#xbox2:hover{    
+    filter: saturate(5.5);
+}
+
+#nintendo2{
+    border: 1px solid rgb(192, 49, 49);
+    color: rgb(192, 49, 49);
+    background-color: #1c292f;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: saturate(0);
+}
+
+#nintendo2:hover{    
+    filter: saturate(5.5);
+   
+}
+
+#pc2{
+    border: 1px solid rgb(163, 163, 163);
+    color: rgb(165, 165, 165);
+    background-color: #1c292f;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: saturate(0);
+}
+
+#pc2:hover{    
+    filter: saturate(5.5);
+    
+}
+
+.data-record{
+    display: inline-flex;
+    text-align: center;
+    word-spacing: 20pt;
+  
+}
+
+.data-record h3{
+    padding: 20px;
+    width: 50%;
+    font-size: 300%;
+    font-family: 'Roboto';
+}
+
+.data-record h3 p{
+    
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+
+/* RECORD */
+
+#record-info h3{
+    color: rgb(226, 178, 19) ;
+}
+
+#record-info h3 p{
+    color: white;
+}
+
+
+
+/* END */ 
+
+/* USR-MONEY */
+#usr-money{
+    position: relative;
+    display: flex;
+    top: 20px;
+    width: 1040px;
+    height: 150px;
+    background-color: #131313;
+}
+
+#money{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    border-right: 2px solid white;
+}
+
+#money h1{
+    color: white;
+}
+
+#money h2{
+    color: #02daff;
+}
+
+#flag{
+    width: 50%;
+    height: 100%;
+    /*background-image: url("../img/flags/flag-fifa.png"); */
+    text-align: center;
+    color: white;
+    
+}
+
+#flag h2{
+    position: relative;
+    top: 20px;
+}
+#flag h4{
+    position: relative;
+    top: 20px;
+}
+
+/* END*/
+
+/* HISTORY */ 
+    #history-games{
+        position: relative;
+        top: 40px;
+        padding: 10px;
+    }
+
+    
+
+    .active{
+        background-color: #292929 !important;
+    }
+
+/* END*/ 
+
+
+/* MODAL */
+.modal-header{
+   
+    color: #dbb051;
+    border-bottom: none;
+}
+
+.modal-content{
+    background-color: #070a10;
+    font-family: 'Roboto';
+}
+
+.title-edit-data{
+    background-color: #253844;
+    color: #dbb051;
+    height: 40px;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.title-edit-p{
+    position: relative;
+    background-color: #253844;
+    color: #dbb051;
+    height: 40px;
+    padding: 10px;
+    top: 10px;
+    border-bottom: 1px solid white;
+}
+
+.edit-data{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #253844;
+    padding: 20px;
+}
+
+.edit-avatar{
+    position: relative;
+    width: 50%;
+   
+    text-align: center;
+}
+
+.edit-avatar img{
+    position: relative;
+    top: -20px;
+    
+}
+
+#edit-img{
+    position: relative;
+    left: -50px;
+    top: 75px;
+    cursor: pointer;
+}
+
+.edit-personal-data{
+    
+    width: 100%;
+    text-align: justify;
+    font-size: 8px;
+}
+
+.edit-games{
+    position: relative;
+    top: 10px;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    background-color: #253844;
+    color: white;
+}
+
+.edit-consoles-user{
+    position: relative;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.tags-c{
+    padding-bottom: 5px;
+}
+
+.input-tag{
+    background-color: rgb(54, 54, 54);
+    color: #dbb051;
+    
+}
+
+.input-tag::placeholder{
+    color: white;
+    
+}
+
+.edit-games-f{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+}
+
+#list-games{
+    position: relative;
+    background-color: #151e23;
+    color: #dbb051;
+    padding: 10px;
+}
+
+
+.modal-body{
+    border: none; 
+}
+
+.modal-footer{
+    border: none; 
+}
+
+.title-modal{
+    position: relative;
+    display: flex;
+    background-color: #253844;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.btn-close{
+    color: white !important;
+}
+
+/* END */
+
+
+.tab2{
+    position: relative;
+    left: 150px;
+    top: 50px;
+    background-color: #292929;
+    display: flex;
+    width: 81.3%;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    color: rgb(226, 178, 19);
+    font-size: 20px;
+    padding: 10px;
+}

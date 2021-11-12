@@ -7,7 +7,7 @@ import { ModalRegisterComponent } from 'src/app/shared/modal-register/modal-regi
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
