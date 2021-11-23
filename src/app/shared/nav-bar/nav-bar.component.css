@@ -54,7 +54,185 @@ hr{
 
 .options-1{
     position: relative;
+    top: 12px;
     width: 380px;
+    
     
 
 }
+
+
+.options-2{
+    position: relative;
+    top: -8px;
+    left: -30px !important;
+    width: 50px;
+}
+
+#avatar{
+    position: relative;
+    top: -7px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+#navbarDropdown2{
+    position: relative !important;
+    top: -4px !important;
+    height: 35px !important;
+    border: 1px solid rgb(240, 174, 31) !important;
+    transition: ease-in 500ms;
+}
+
+#nanavbarDropdown2:hover{
+    color: rgb(240, 174, 31) !important;
+}
+
+.dropdown-menu{
+    background-color: black !important;
+    border: 1px solid white !important;
+
+}
+
+.link-d-menu{
+    border-bottom: 1px solid white !important;
+}
+
+.link-d-menu:hover{
+   color: rgb(240, 174, 31) !important;
+   background-color: none !important;
+}
+
+#logOut:hover{
+    color: crimson !important;
+}
+
+#logOut{
+    color: crimson !important;
+}
+
+#navBar{
+    border-bottom: 1px solid rgb(240, 174, 31) !important;
+}
+
+#hr-v{
+    position: absolute;
+    top: -25px;
+    width: 3px;
+    height: 35px;
+    color:rgb(150, 149, 149);
+}
+
+#money_usr{
+    position: relative;
+    width: 30px;
+    left: -20px;
+    top: -3px;
+}
+
+
+/* MODAL Edit */
+.modal-header , .modal-body, .modal-footer{
+    position: relative;
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.modal-body{
+    position: relative;
+    text-align: center;
+    height: 600px;
+}
+
+.close{
+    position: relative;
+    left: 96%;
+}
+
+.data-modal{
+    position: relative;
+    width: 100%;
+}
+
+
+.data-modal-2{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.data-modal-2 button{
+    position: relative;
+    width: 400px;
+    
+    border-radius: 15px;
+}
+
+#logoIn{
+    position: relative;
+    width: 60px;
+}
+#dialog-0{
+    font-size: 20px;
+}
+
+#dialog-1{
+    font-size: 12px;
+}
+
+#dialog-1 a{
+    color: rgb(180, 156, 21);
+}
+
+.dialog-2 {
+    color: rgb(180, 156, 21);
+    font-size: 12px;
+}
+
+.dialog-2-1 {
+    position: relative;
+    color: white;
+    left: 5px;
+    font-size: 12px;
+}
+
+
+.input-logIn{
+  
+    position: relative;
+    left: -80px;
+    width: 400px;
+    border-radius: 15px;
+
+}
+
+.button-li{
+    font-size: 18px;
+    border-radius: 0px;
+    border: white 1px solid;
+    transition: all 100ms ease-in;
+}
+
+.button-li:hover{
+    filter: contrast(1.5);
+}
+
+.modal-body{
+    position: relative !important;
+    height: 1000px !important;
+    background-color: #070a10 !important;
+
+}
+
+
+
+
+
+
+
+
+/* */

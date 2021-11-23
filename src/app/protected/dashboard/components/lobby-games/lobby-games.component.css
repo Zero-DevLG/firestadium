@@ -1,0 +1,1505 @@
+@font-face {
+    font-family: 'Roboto';
+    src: "../../../assets/fonts/Roboto-Bold.ttf";
+  }
+
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 910px;
+    background-color: #070a10;
+    font-family: 'Roboto';
+    overflow-x: hidden;
+    overflow-y: hidden;
+ 
+}
+
+
+
+.container-pages{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#loading{
+    position: relative;
+    top: 45%;
+    left: 45%;
+    width: 300px;
+    height: 300px;
+    z-index: 3;
+    display: none;
+}
+
+.navbar{
+    background-color: #192228 !important;
+    color: white !important;
+    width: 100% !important;
+    z-index: 1;
+    border-bottom: 2px solid rgb(226, 178, 19);
+}
+
+#logo-nav{
+    width: 220px;
+    height: 20px;
+}
+
+
+.nav-link{
+    color: white !important; 
+}
+
+/* SIDEBAR */
+.side-bar{
+    position: absolute;
+    background-color: #151e23;
+    border-right: 2px solid rgb(226, 178, 19) ;
+    width: 95px;
+    min-height: 866px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 0;
+    padding: 15px;
+    z-index: 1;
+    transition: all ease-in 100ms;
+}
+
+
+.side-bar:hover{
+    width: 280px;
+}
+
+.side-bar .side-option :hover{
+    display: block;
+}
+
+
+.s-active{
+  
+  
+}
+ul{
+    margin: 0;
+    padding: 0;  
+    left: -20px;   
+}
+
+
+ a{
+    text-decoration: none;
+  
+}
+.side-option{
+    display: flex; 
+}
+
+.text-option{
+    position: relative;
+    left: 35px;
+    top: 15px;
+    color: white;
+    z-index: -1;
+    transition: all ease-in 300ms;
+    cursor: pointer;
+    
+}
+
+.text-option:hover{
+    display: block;
+}
+
+.text-option:hover{
+    color: violet;
+}
+
+.link-option{
+    color: white;
+    transition: all ease-in 300ms;
+}
+
+.link-option:hover{
+    color: #02daff;
+}
+
+
+.text-option a{
+    color: white;
+}
+
+.hr-side{
+    color: rgb(226, 178, 19);
+}
+
+
+
+.img-side{
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: 10px;
+    width: 50px;
+    filter: saturate(0.8);
+    cursor: pointer;
+    transition: all ease-in 300ms;
+    
+}
+
+.img-side:hover{
+    filter: saturate(4.5);
+   /*transform: scale(1.2); */
+
+}
+
+.dropdown-toggle{
+    border: 1px solid rgb(226, 178, 19) ;
+    color: rgb(226, 178, 19);
+    background-color:#192228 !important
+}
+
+.dropdown-menu{
+    background-color: black;
+    border: 1px solid white;
+}
+
+.dropdown-menu ul li{
+    border-top: 1px solid white;
+    color: white;
+}
+.dropdown-menu ul li a{
+    text-decoration: none;
+    color: white !important;
+}
+
+.list-nav{
+    text-align: center;
+}
+
+
+
+.text-nav{
+    color: white;
+}
+
+.text-nav:hover{
+    color: rgb(226, 178, 19) !important;
+}
+
+#logout{
+    color: red;
+}
+
+.dropdown-toggle:hover{
+    filter: saturate(5.5) !important;
+    background-color: black !important;
+}
+
+.nav-item{
+    padding-left: 20px !important;
+    text-align: center !important;
+}
+
+#avatar-navbar{
+    width:35px; 
+    position: relative; 
+    top: -5px;
+    
+}
+
+#hr-v{
+    width: 5px;
+    height: 30px;
+    border-right: 3px solid rgb(153, 153, 153);
+}
+
+/* END */ 
+
+#data{
+    position: relative;
+    display: flex;
+    top: 4px;
+    left: 120px;
+    width: 1900px !important;
+    height: 800px;
+    margin: 5px;
+   
+   
+}
+
+
+#navbarDropdown{
+    color: #dbbe19;
+}
+
+.col-md-10{
+    padding: 25px;
+    text-align: center;
+}
+
+
+.col-md-12{
+    padding: 25px;
+    text-align: center;
+}
+
+.col-md-8{
+    overflow-y: auto;
+}
+
+#user-info{
+    position: relative;
+    top: 0px;
+    left: 28px !important;
+    width: 400px;
+    height: 790px;
+    margin-bottom: 10px;
+    background-color: #253844;
+    color: #02daff;
+    font-family: 'Roboto';
+    font-size: 19px;
+    padding: 10px;
+    text-align: center;
+}
+
+#data_user2{
+    position: relative;
+    left: 40px !important;
+    width: 58% !important;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+#avatar-usr
+{
+    position: relative;
+    top: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: contrast(0.9);
+}
+
+#avatar-usr:hover{
+    filter: contrast(1.55);
+    
+}
+
+.name-c{
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+
+#ps{
+    border: 1px solid rgb(50, 53, 206);
+    color: rgb(50, 53, 206);
+    padding: 5px;
+    background-color: #1c292f;
+    width: 70px !important;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#ps:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+
+#xbox{
+    border: 1px solid green;
+    color: green;
+    background-color: #1c292f;
+    width: 70px;
+    padding: 5px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#xbox:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+#nintendo{
+    border: 1px solid rgb(192, 49, 49);
+    color: rgb(192, 49, 49);
+    background-color: #1c292f;
+    width: 70px;
+    padding: 5px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#nintendo:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+#pc{
+    border: 1px solid rgb(240, 240, 240);
+    color: rgb(240, 240, 240);
+    background-color: #1c292f;
+    width: 70px;
+    padding: 5px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+}
+
+#pc:hover{    
+    filter: saturate(5.5);
+    color: rgb(226, 178, 19);
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(226, 178, 19);
+}
+
+#ps2{
+    border: 1px solid rgb(50, 53, 206);
+    color: rgb(50, 53, 206);
+    background-color: #1c292f;
+    width: 120px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    filter: saturate(0);
+}
+
+#ps2:hover{    
+    filter: saturate(5.5);
+}
+
+
+#xbox2{
+    border: 1px solid green;
+    color: green;
+    background-color: #1c292f;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: saturate(0);
+}
+
+#xbox2:hover{    
+    filter: saturate(5.5);
+}
+
+#nintendo2{
+    border: 1px solid rgb(192, 49, 49);
+    color: rgb(192, 49, 49);
+    background-color: #1c292f;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: saturate(0);
+}
+
+#nintendo2:hover{    
+    filter: saturate(5.5);
+   
+}
+
+#pc2{
+    border: 1px solid rgb(163, 163, 163);
+    color: rgb(165, 165, 165);
+    background-color: #1c292f;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    filter: saturate(0);
+}
+
+#pc2:hover{    
+    filter: saturate(5.5);
+    
+}
+
+.data-record{
+    display: inline-flex;
+    text-align: center;
+    word-spacing: 20pt;
+    color: rgb(226, 178, 19) !important;
+  
+}
+
+.data-record h4{
+    padding: 20px;
+    width: 50%;
+    font-size: 300%;
+    font-family: 'Roboto';
+}
+
+.data-record h4 p{
+    
+    width: 50%;
+    font-size: 30px !important;
+    font-family: 'Roboto';
+    color: white;
+}
+
+/* RECORD */
+
+#record-info h4{
+    color: rgb(226, 178, 19) ;
+    font-family: 'Roboto';
+    font-size: 50px !important;
+    margin-left: 15px !important;
+}
+
+#record-info h4 p{
+    color: white;
+    font-family: 'Roboto';
+}
+
+
+
+/* END */ 
+
+/* USR-MONEY */
+#usr-money{
+    position: relative;
+    display: flex;
+    top: 20px;
+    width: 99% !important;
+    height: 150px;
+    background-color: #131313;
+}
+
+#money{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    border-right: 2px solid white;
+}
+
+#money h1{
+    color: white;
+}
+
+#money h2{
+    color: #02daff;
+}
+
+#flag{
+    width: 50%;
+    height: 100%;
+    /*background-image: url("../img/flags/flag-fifa.png"); */
+    text-align: center;
+    color: white;
+    
+}
+
+#flag h2{
+    position: relative;
+    top: 20px;
+}
+#flag h4{
+    position: relative;
+    top: 20px;
+}
+
+/* END*/
+
+/* HISTORY */ 
+    #history-games{
+        position: relative;
+        top: 40px;
+        padding: 10px;
+    }
+
+    
+
+    .active{
+        background-color: #292929 !important;
+    }
+
+/* END*/ 
+
+
+/* MODAL */
+.modal-header{
+   
+    color: #dbb051;
+    border-bottom: none;
+}
+
+.modal-content{
+    background-color: #070a10;
+    font-family: 'Roboto';
+}
+
+.title-edit-data{
+    background-color: #253844;
+    color: #dbb051;
+    height: 40px;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.title-edit-p{
+    position: relative;
+    background-color: #253844;
+    color: #dbb051;
+    height: 40px;
+    padding: 10px;
+    top: 10px;
+    border-bottom: 1px solid white;
+}
+
+.edit-data{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #253844;
+    padding: 20px;
+}
+
+.edit-avatar{
+    position: relative;
+    width: 50%;
+   
+    text-align: center;
+}
+
+.edit-avatar img{
+    position: relative;
+    top: -20px;
+    
+}
+
+#edit-img{
+    position: relative;
+    left: -50px;
+    top: 75px;
+    cursor: pointer;
+}
+
+.edit-personal-data{
+    
+    width: 100%;
+    text-align: justify;
+    font-size: 8px;
+}
+
+.edit-games{
+    position: relative;
+    top: 10px;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    background-color: #253844;
+    color: white;
+}
+
+.edit-consoles-user{
+    position: relative;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.tags-c{
+    padding-bottom: 5px;
+}
+
+.input-tag{
+    background-color: rgb(54, 54, 54);
+    color: #dbb051;
+    
+}
+
+.input-tag::placeholder{
+    color: white;
+    
+}
+
+.edit-games-f{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+}
+
+#list-games{
+    position: relative;
+    background-color: #151e23;
+    color: #dbb051;
+    padding: 10px;
+}
+
+
+.modal-body{
+    border: none; 
+}
+
+.modal-footer{
+    border: none; 
+}
+
+.title-modal{
+    position: relative;
+    display: flex;
+    background-color: #253844;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.btn-close{
+    color: white !important;
+}
+
+/* END */
+
+
+.tab2{
+    position: relative;
+    left: 150px;
+    top: 10px;
+    background-color: #292929;
+    margin-bottom: 10px;
+    display: flex;
+    width: 1520px;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    color: rgb(226, 178, 19);
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* ngClass */
+
+.win{
+    font-family: 'Roboto';
+    color: green !important;
+}
+
+.loose{
+    font-family: 'Roboto';
+    color: red !important;
+}
+
+
+/* LOBBY GAMES */
+
+
+
+
+/**/
+  .cloak{
+      position: relative;
+      width: 100%;
+      left: 40%;
+      display: flex;
+      
+  }
+
+  #window-game{
+    box-shadow: 0 0 5px 5px rgb(226, 178, 19);
+  }
+  /*
+  .modal-dialog{
+    box-shadow: 0 0 5px 5px rgb(226, 178, 19);
+  }
+*/
+  .input-timer{
+      position: relative;
+      width: 100px;
+      background-color: none;
+      font-family: 'DS-DIGIB';
+      font-size: 50px;
+      color: rgb(226, 178, 19);
+      background-color: #0a0a0a !important;
+      text-align: center;
+      border: 1px solid rgb(226, 178, 19);
+      transition: all ease-in 300ms;
+      filter: contrast(0.2);
+
+  }
+  .timer{
+      position: relative;
+      width: 100%;
+      height: 150px;
+      text-align: center;
+      background-color: #253844;
+      border-radius: 5px;
+      padding: 5px;
+  }
+
+  .timer h5{
+    font-family: 'DS-DIGIB';
+    color: white;
+  }
+
+  .timer h2{
+
+    font-family: 'DS-DIGIB';
+    color: rgb(226, 178, 19);
+    font-size: 80px;
+    
+}
+
+
+  .timer h1{
+
+      font-family: 'DS-DIGIB';
+      color: rgb(226, 178, 19);
+      font-size: 50px;
+      
+  }
+
+/**/
+
+
+/* */
+  .pvp{
+      position: relative;
+      top: 10px;
+      display: flex;
+      width: 100%;
+      height: 370px;
+      background-color: #253844;
+      padding: 5px;
+
+
+  }
+
+  #vs
+  {
+    position: absolute;
+    left: 44%;
+    top: 25%;
+    z-index: 1;
+    transition: all ease-in 300ms;
+    cursor: pointer;
+    filter: contrast(0.2);
+  }
+
+  #vs:hover{
+      filter: contrast(1.3);
+  }
+
+
+  .p1
+  {
+    position: relative;
+    width: 50%;
+    height: 350px;
+  }
+
+  .p2
+  {
+    position: relative;
+    width: 50%;
+    height: 350px;
+  }
+
+  .username-p
+  {
+    position: relative;
+    width: 96%;
+    height: 40px;
+    background-color: black;
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .p1-info
+ {
+    position: relative;
+    top: 10px;
+    width: 96%;
+    height: 270px;
+    background-color: rgb(14, 19, 31);
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    padding: 5px;
+    overflow-y: hidden;
+    /*box-shadow: 0 0 5px 5px rgb(53, 178, 228);*/
+   
+  }
+
+  .p2-info
+  {
+    position: relative;
+    top: 10px;
+    width: 96%;
+    height: 270px;
+    background-color: rgb(14, 19, 31);
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    padding: 5px;
+    overflow-y: hidden;
+   }
+
+   #avatar-p1{
+       position: relative;
+       width: 100%;
+       height: 230px;
+       padding: 5px;
+       align-items: center;
+       text-align: center;
+       cursor: pointer;
+       transition: all ease-in 300ms;
+   }
+
+
+   #img-p1{
+        position: relative;
+        width: 250px;
+        transition: all ease-in 300ms;
+
+
+   }
+
+   .stats-p1
+   {
+        position: relative;
+        left: 27%;
+        top: 40px;
+        width:50%;
+        height: 80px;
+        display: flex;
+        background-color: #6baff2;
+        color: black;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        transition: all ease-in 300ms;
+
+   }
+
+   #avatar-p2{
+    position: relative;
+    width: 100%;
+    height: 230px;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in 300ms;
+}
+
+
+
+
+   #img-p2{
+    position: relative;
+    width: 250px;
+    transition: all ease-in 300ms;
+
+
+}
+
+
+
+   .stats-p2
+   {
+        position: relative;
+        left: 27%;
+        top: 40px;
+        width:50%;
+        height: 80px;
+        display: flex;
+        background-color: #6baff2;
+        color: black;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        transition: all ease-in 300ms;
+
+   }
+
+   .info-game
+   {
+        position: relative;
+        top: 20px;
+        width: 100%;
+        height: 250px;
+        background-color: #253844;
+        padding: 10px;
+   }
+
+   #rules-game
+   {
+       position: relative;
+       left: 0px;
+       width: 99%;
+       height: 150px;
+       text-align: center;
+       color: white;
+       font-family: 'Roboto';
+       background-color: black;
+       padding: 10px;
+       font-size: 15px;
+       overflow-y: auto;
+   }
+
+   .btn-init{
+       background-color: rgb(226, 178, 19) ;
+       color: black;
+   }
+
+   .btn-finish{
+    background-color: rgb(226, 178, 19) ;
+    color: black;
+}
+
+
+
+
+
+/**/
+
+
+.lobby-page{
+    position: relative;
+    left: 120px;
+    top: 20px;
+    width: 90%;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    
+    
+}
+
+h5{
+    
+}
+
+.tab1{
+    background-color: #292929;
+    display: flex;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    color: rgb(226, 178, 19);
+    font-size: 20px;
+    padding: 10px;
+}
+
+h6{
+    color: white;
+}
+
+.f-c{
+    position: relative;
+    top: 20px;
+    width: 30%;
+    height: 300px;
+    
+
+}
+
+.input-f{
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    bottom: 0;  
+}
+
+.f-2{
+    position: relative;
+    width: 100%;
+    height: 135px;
+    
+}
+
+.btn-party{
+    position: relative;
+    top: 15px;
+    height: 50px !important;
+    transition: all ease-in 300ms;
+}
+
+.btn-party:hover{
+    background-color: rgb(226, 178, 19);
+}
+
+.f-games{
+    border: 2px solid rgb(136, 136, 136);
+    color: rgb(136, 136, 136);
+    background-color: rgb(83, 83, 83);
+    margin: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: all ease-in 300ms;
+}
+
+.f-games:hover{
+    color: rgb(226, 178, 19);
+    border: 2px solid rgb(226, 178, 19);
+    background-color: white;
+}
+
+
+.filtros{
+    position: relative;
+    display: flex;
+    left: 0px;
+    width: 100%;
+    height: 180px;
+    padding: 20px;
+    background-color: #253844;
+
+}
+
+.table-games{
+    position: relative;
+    top: 20px;
+    font-family: 'Roboto';
+    overflow-y: hidden;
+    width: 100%;
+    height: 600px; 
+}
+
+.btn-u{
+    background-color: rgb(75, 124, 170);
+    color: rgb(226, 178, 19);
+    font-family: 'Roboto' !important;
+    transition: all ease-in 300ms;
+}
+
+.btn-u:hover{
+    color: white;
+    background-color: rgb(226, 178, 19);
+}
+
+.input-f2{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.input-f2::placeholder{
+    color: white;
+}
+
+.header-newG{
+    position: relative;
+    background-color: #192228;
+    align-items: center;
+    text-align: center !important;
+}
+
+
+.info-party{
+    position: relative;
+    display: flex;
+}
+
+.games-new{
+    position: relative;
+    width: 50%;
+  
+    }
+
+.img-games-n{
+    position: relative;
+    top: 10px;
+    width: 95%;
+    height: 280px;
+    background-color: #253844;
+    border-radius: 5px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.consoles-n{
+    position: relative;
+    top: 0px;
+    width: 95%;
+    height: 180px;
+    background-color: #253844;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+hr{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    color: white;
+}
+
+.list-icons{
+    position: relative;
+    top: 0px;
+    display: flex;
+    
+}
+
+.money-new{
+    position: relative;
+    width: 50%;
+    height: 470px;
+    background-color: #253844;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#number-4{
+    position: relative;
+    width: 100px;
+}
+
+.rules{
+    position: relative;
+    width: 95%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+.pay{
+    position: relative;
+    width: 95%;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+#title-modal-game{
+    position: relative;
+    color: rgb(226, 178, 19);
+
+}
+
+#number-1{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    font-family: 'Analisis' !important;
+    color: #02daff;
+}
+
+
+
+.icon-console{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    font-family: 'Roboto';
+    filter: contrast(0.25);
+    cursor: pointer;
+    transition: all ease-in 300ms;
+    overflow: hidden;
+}
+
+
+
+.icon-console:hover{
+    filter: contrast(1.2);
+    color: rgb(226, 178, 19);
+}
+
+/**/
+#ps-logo{
+    position: absolute;
+    top: 0;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+#xbox-logo{
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+#nintendo-logo{
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+#pc-logo{
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+
+/**/
+
+
+/* Carrusel games */
+  .main-carrusel{
+      position: relative;
+      width: 330px;
+      height: 180px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: flex;
+      text-align: center;
+  }  
+  .submain-carrusel{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 280px;
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+} 
+
+  .img-c{
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 80px;
+      margin: 5px;
+      transition: all ease-in 100ms;
+      filter: contrast(0.5);
+      cursor:pointer;
+  }
+
+  .img-c:hover{
+      transform: scale(1.2);
+      filter: contrast(1.1);
+  }
+
+  #r{
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      z-index: 1;
+      width: 20px;
+      cursor: pointer;
+  }
+
+  #l{
+    position: absolute;
+      top: 50px;
+      left: 300px;
+      z-index: 1;
+      width: 20px;
+      cursor: pointer;
+}
+
+
+/*   */
+
+
+/* */ 
+.tablero{
+    position: relative;
+    display: flex;
+    top: 10px;
+    left: 20px;
+
+}
+
+
+#rest{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(31, 31, 31);
+    color: rgb(226, 178, 19);
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#number-t{
+    position: relative;
+    display: flex;
+    width: 160px;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(15, 160, 15);
+    text-align: center;
+    
+    
+}
+
+#signo{
+    position: relative;
+    text-align: center;
+    padding-top: 15px;
+    width: 40px;
+    height: 60px;
+    background-color: grey;
+    color: rgb(226, 178, 19);
+    font-size: 20px;
+}
+#valor{
+    position: relative;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(15, 160, 15);
+    font-size: 30px;
+    transition: all ease-out 500ms;
+}
+
+.input-money{
+    position: relative;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(15, 160, 15);
+    font-size: 30px;
+    border: none;
+}
+
+#sum{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(31, 31, 31);
+    color: rgb(226, 178, 19);
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/**/
+
+
+/* chat*/
+
+    #icon-chat{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        z-index: 2;
+        cursor: pointer;
+        transition: all ease-in 500ms;
+    }
+
+    #icon-chat:hover{
+        transform: scale(1.2);
+    }
+
+
+    .chat{
+        position:absolute;
+        top: 0px;
+        left: 0px;
+        width: 350px;
+        height: 805px;
+        background-color: #192228;
+        z-index: 2;
+        border-right: 1px solid rgb(226, 178, 19);
+        border-top: 1px solid rgb(226, 178, 19);
+        border-bottom: 1px solid rgb(226, 178, 19);
+        transition: all ease-in 1000ms;
+        display: none;
+    }
+
+
+    .head-chat{
+        position: relative;
+        background-color: #192228;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        font-family: 'Roboto';
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .head-chat img{
+        position: absolute;
+        top: 10px;
+        left: 70px;
+    }
+
+    .close{
+        position: absolute;
+        left: 68%;
+        top: -5px;
+        width: 60px;
+        cursor: pointer;
+        transition: all ease-in 1000ms;
+    }
+
+    .close img{
+        width: 40px;
+    }
+
+    .body-chat
+    {
+        position: relative;
+        background-color: #253844;
+        width: 92%;
+        height: 650px;
+        top: 10px;
+        left: 15px;
+        border-radius: 5px;
+        border: 3px solid rgb(51, 51, 51);
+        padding: 20px;
+
+    }
+
+    .chat-message{
+        position: relative;
+        top: 20px;
+        width: 100%;
+        font-family: 'Roboto';
+        font-size: 12px;
+    }
+
+    .chat-message input{
+        font-family: 'Roboto';
+        font-size: 12px;
+    }
+/* END */

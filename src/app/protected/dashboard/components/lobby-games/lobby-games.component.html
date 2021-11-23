@@ -1,0 +1,125 @@
+<div class="side-bar" (mouseenter) ="mouseEnter('div a')" (mouseleave) ="mouseLeave('div A')"     >
+    <div class="side-option s-active" (click)="goToLobbyUser()" (mouseenter) ="mouseEnter('div a')" (mouseleave) ="mouseLeave('div A')"> <a><img  class="img-side" src="../../../assets/img/PNG/Monito1.png" alt=""></a><h5 class="text-option"><a *ngIf="visible" id="user" class="link-option"> Mi Cuenta</a></h5></div>
+    <hr class="hr-side">
+    <div class="side-option" (click)="goToLobbyGames()" (mouseenter) ="mouseEnter('div a')" > <a><img  class="img-side" src="../../../assets/img/PNG/Control.png" alt=""></a><h5 class="text-option"><a *ngIf="visible" id="lobby" class="link-option" >Lobby</a></h5></div>
+    <hr class="hr-side">
+    <div class="side-option" (mouseenter) ="mouseEnter('div a')"> <a><img  class="img-side" src="../../../assets/img/PNG/Ayuda.png" alt=""></a><h5 class="text-option"><a *ngIf="visible" id="help" class="link-option">Ayuda</a></h5></div>
+    <hr class="hr-side">
+</div>  
+
+
+
+
+    <div class="lobby-page">
+        <h5 class="tab1">LOBBY DE PARTIDAS</h5>
+        <div class="filtros">
+            <div class="f-c">
+                <h6>FILTRO POR CONSOLA:</h6>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 f-games">PS4/PS5</div>
+                        <div class="col-md-4 f-games">XBOX</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 f-games">SWITCH</div>
+                        <div class="col-md-4 f-games">PC</div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-2">
+                <div class="input-f">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label style="color: white;" for="">ORDENA POR:</label>
+                                <select name="" id="" class="form-control input-f2">
+                                    <option value="">ELIGE TU JUEGO</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label style="color: white;" for="">MONTO:</label>
+                                <input type="text" class="form-control input-f2" placeholder="$0000.00">
+                            </div>
+                            <div class="col-md-4">
+                                <app-modal-game></app-modal-game>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="table-games"  style="overflow-y: auto;">
+            <table class="table table-dark">
+            
+                <tbody>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(74, 182, 74);">$50.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button id="btn-u" class="btn btn-u">UNETE</button></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(74, 182, 74);">$50.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button id="btn-u2" class="btn btn-u">UNETE</button></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(74, 182, 74);">$50.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button class="btn btn-u">UNETE</button></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(207, 35, 29);">$550.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button class="btn btn-u" disabled>UNETE</button></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(74, 182, 74);">$50.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button class="btn btn-u">UNETE</button></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(74, 182, 74);">$50.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button class="btn btn-u">UNETE</button></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 60px;" src="img/covers/FIFA22.jpg" alt=""></td>
+                        <td style="color:rgb(74, 182, 74);">$50.00</td>
+                        <td>PS4/PS5</td>
+                        <td>PGRI</td>
+                        <td>45-24</td>
+                        <td>MUT DRAFT</td>
+                        <td><button class="btn btn-u">UNETE</button></td>
+                    </tr>
+                 
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>

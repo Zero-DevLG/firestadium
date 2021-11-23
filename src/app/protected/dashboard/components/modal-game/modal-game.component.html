@@ -1,0 +1,107 @@
+
+<ng-template #content let-modal>
+ 
+    <div class="modal-body" style="background-color: #171f24;">
+        
+        <h5 class="modal-title" id="exampleModalLabel"  style="position: relative;  background-color: #253844; padding: 8px; border-radius: 5px;"><img style=" position: relative; left: 45%; width: 50px;" id="logoIn" src="../../../assets/img/logIn/logo.png" alt=""></h5>
+        <h4 id="title-modal-game">CREAR NUEVA PARTIDA</h4>
+       
+        <div class="info-party">
+            <div class="games-new">
+                <div class="consoles-n" disabled>
+                    <div ><!--<img id="number-1" src="img/icons/1.png" alt="">--></div>
+                    <br>
+                    <div class="title-consoles">
+                        <h5 style="color: white; text-align: center;">SELECCIONA LA CONSOLA:</h5>
+                    </div>
+                    <hr>
+                    <div class="list-icons">
+                        <div class="icon-console" [ngClass]="{'active':platform === '92e0ddb1-4721-4948-aef2-37cf74142020'}"  id="psn" (click)="selectPlatform('92e0ddb1-4721-4948-aef2-37cf74142020')" >
+                            PS4/PS5
+                            <img id="ps-logo" src="../../../../../assets/img/icons/ps-logo.jpg" alt="">
+                        </div>
+                        <div class="icon-console" [ngClass]="{'active':platform === 'b54e4440-0340-469e-9306-cf6e7a1b2187'}" id="xbox-i" (click)="selectPlatform('b54e4440-0340-469e-9306-cf6e7a1b2187')">
+                            XBOX
+                            <img id="xbox-logo" src="img/icons/xbox-logo.jpg" alt="">
+                        </div>
+                       
+                        <div class="icon-console" [ngClass]="{'active':platform === 'eb2417df-e288-4843-ace9-09fbd144b75a'}" id="nintendo-i" (click)="selectPlatform('eb2417df-e288-4843-ace9-09fbd144b75a')">
+                            SWITCH
+                            <img id="nintendo-logo" src="img/icons/nintendo-logo.jpg" alt="">
+                        </div>
+                        <div class="icon-console" [ngClass]="{'active':platform === 'dcd547cf-ab59-4d91-9f71-50904ec2ed28'}" id="pc-i" (click)="selectPlatform('dcd547cf-ab59-4d91-9f71-50904ec2ed28')">
+                            PC
+                            <img id="pc-logo" src="img/icons/pc-logo.jpg" alt="">
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="img-games-n">
+                    <div ><!--<img id="number-1" src="img/icons/2.png" alt="">--></div>
+                    <br>
+                    <h5 style="color: white;">SELECCIONA EL JUEGO:</h5>
+                    <hr>
+                   
+                    <div style="color: white !important;">
+                        <h5 *ngIf="platform == ''">Para continuar seleccione un juego</h5>
+                        <!--{{ platform }}
+                        <select   name="" class="form-control" id="">
+                            <option value="0">Selecciona un juego</option>
+                            <option  id="id" name="id"  *ngFor="let item of gameList" [value]="item.id">{{ item.title.first }} {{ item.title.second}}</option>
+                        </select> -->
+                    </div>
+                    <div class="main-carrusel" *ngIf="platform !=''">
+                        <div ><img id="r" src="../../../../../assets/img/icons/left.png" (click)="left()" alt=""></div>
+                        <div class="submain-carrusel">
+                            <div *ngFor="let item of c3"><img [ngClass]="{'activeG':gameS === item.id}"  class="img-c" [src]="item.url" (click)="selectGame(item.id)"  alt=""></div>
+                            
+                        </div>
+                        
+                        <div><img id="l" src="../../../../../assets/img/icons/right.png" (click)="right()" alt=""></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="money-new">
+                <div class="rules">
+                    <!--<img id="number-4" src="img/icons/3.png" alt="">-->
+                    <br>
+                    <br>
+                    <h5>MODALIDAD DE JUEGO:</h5>
+                    <hr>
+                    <select  (change)="selectMode($event.target)" name="" class="form-control" id="">
+                        <option value="0">Selecciona un modo de juego</option>
+                        <option  id="id" name="id"  *ngFor="let item of modeList" [value]="item.id">{{ item.name}}</option>
+                    </select>
+                </div>
+                <div class="pay">
+                    <!--<img src="img/icons/4.png" alt="">-->
+                    <br>
+                    <br>
+                    <h5>MONTO DE LA APUESTA:</h5>
+                    <hr>
+                    <div class="tablero">
+                        <div id="rest" (click)="downMount()"><h1>-</h1></div>
+                        <div id="number-t">
+                            <div id="signo">$</div>
+                            <div id="valor"><input type="text" class="form-control input-money" [value]="monto"></div>
+                        </div>
+                        <div id="sum" (click)="upMount()"><h1>+</h1></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">ABANDONAR PARTIDA</button>
+            <button type="button" class="btn btn-init">COMENZAR PARTIDA</button>
+          </div>
+                    
+                    
+             
+    </div>
+
+</ng-template>
+<button class="btn btn-dark btn-party" (click)="openLg(content)">+ CREAR PARTIDA</button>

@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Roboto';
+    src: "../../../assets/fonts/Roboto-Bold.ttf";
+  }
+
+*{
+    font-family: 'Roboto' !important;
+}
+
+
+
+
 .button-si{
     position: relative;
     font-size: 20px;

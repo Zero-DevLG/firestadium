@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import {  NgbModal,NgbModalRef  } from '@ng-bootstrap/ng-bootstrap'
 import { ModalSignInComponent } from '../modal-sign-in/modal-sign-in.component';
 import Swal from 'sweetalert2';
 import { AuthServicesService } from '../../services/auth-services.service';
 import { Router } from '@angular/router';
+import { dataUser } from 'src/app/interfaces/login_interface';
 
 
 @Component({
@@ -19,7 +20,6 @@ export class ModalRegisterComponent implements OnInit {
   modal!: NgbModalRef;
 
 
-
   constructor( public modalService:NgbModal, private authService : AuthServicesService, private router: Router) {
     
    }
@@ -28,6 +28,7 @@ export class ModalRegisterComponent implements OnInit {
 
   }
 
+ 
 
   logIn(user:string, password:string){
     this.user = user;

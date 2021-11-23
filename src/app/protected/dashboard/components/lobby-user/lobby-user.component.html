@@ -1,0 +1,107 @@
+<div class="side-bar" (mouseenter) ="mouseEnter('div a')" (mouseleave) ="mouseLeave('div A')"     >
+    <div class="side-option s-active" (click)="goToLobbyUser()" (mouseenter) ="mouseEnter('div a')" (mouseleave) ="mouseLeave('div A')"> <a><img  class="img-side" src="../../../assets/img/PNG/Monito1.png" alt=""></a><h5 class="text-option"><a *ngIf="visible" id="user" class="link-option"> Mi Cuenta</a></h5></div>
+    <hr class="hr-side">
+    <div class="side-option" (click)="goToLobbyGames()" (mouseenter) ="mouseEnter('div a')" > <a><img  class="img-side" src="../../../assets/img/PNG/Control.png" alt=""></a><h5 class="text-option"><a *ngIf="visible" id="lobby" class="link-option" >Lobby</a></h5></div>
+    <hr class="hr-side">
+    <div class="side-option" (mouseenter) ="mouseEnter('div a')"> <a><img  class="img-side" src="../../../assets/img/PNG/Ayuda.png" alt=""></a><h5 class="text-option"><a *ngIf="visible" id="help" class="link-option">Ayuda</a></h5></div>
+    <hr class="hr-side">
+</div>  
+
+
+
+
+
+
+<h5 class="tab2">MI PERFIL</h5>
+<div id="data">
+    <div id="user-info">
+        
+        <img id="avatar-usr"   *ngIf="authService.dataUser.value.avatar != ''" [src]="this.authService.user_image" alt="">
+        <img id="avatar-usr"   *ngIf="authService.avatar == ''" src="../../../../../assets/img/PNG/Monito1.png" alt="">
+        <br>
+        <br>
+        <h2>{{ authService.dataUser.value.userName }}</h2>
+
+  
+            <hr>
+        
+            <h2>RECORD</h2>
+            <div class="data-record">
+                <h4># <p>{{ matchs }}</p></h4>
+                <h4>W <p>{{ wins }}</p> </h4>
+                <h4>L  <p>{{ loses }}</p></h4>
+            </div>
+        
+            <hr>
+   
+ 
+        <!--
+        <div class="row">
+          
+          <h3>CONSOLAS</h3>
+          <br>
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-3"> <div id="ps"><h6 class="name-c">PS4/PS5</h6></div></div>
+          <div class="col-md-3"> <div id="xbox"><h6 class="name-c">XBOX</h6></div></div>
+          <div class="col-md-3"> <div id="nintendo"><h6 class="name-c">SWITCH</h6></div></div>
+          <div class="col-md-3"> <div id="pc"><h6 class="name-c">PC</h6></div></div> 
+        </div>
+        
+        <br>
+
+        -->  
+    </div>
+   
+  
+        
+                     
+  
+               
+      
+
+                <div id="data_user2" style="background-color: #171f24;">
+                
+                <div id="usr-money">
+                    <div id="money">
+                        <h2>SALDO ACTUAL:</h2>
+                        <h1>{{  authService.dataUser.value.balance |  currency:'USD' }}</h1>
+                    </div>
+                    <div id="flag">
+                        <h2>GANANCIA MAS GRANDE:</h2>
+                        <h4>$0.00</h4>
+                    </div>
+                </div>
+
+                <div id="history-games"> 
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                        <img class="icon-tabs"  alt=""> Historial
+                        </button>
+                    </li>       
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <table class="table table-sm table-dark table-borderless">
+                            <tbody>
+                                <tr *ngFor="let item of h">
+                                    <td>{{ item.userName }}</td>
+                                    <td>{{ item.game }}</td>
+                                    <td>{{ item.platform }}</td>
+                                    <td>{{ item.modality }}</td>
+                                    <td [ngStyle]="{'color': item.result === 'Ganada' ? 'green' : 'red' }">{{ item.amount |  currency:'USD' }}</td>
+                                    <td>{{ item.matchDate }}</td>
+                                    <td [ngStyle]="{'color': item.result === 'Ganada' ? 'green' : 'red' }">{{ item.result  }}</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+</div>
+

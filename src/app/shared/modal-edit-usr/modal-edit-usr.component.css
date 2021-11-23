@@ -1,27 +1,22 @@
 @font-face {
     font-family: 'Roboto';
-    src: "../../../assets/fonts/Roboto-Bold.ttf";
+    src: "../fonts/Roboto-Bold.ttf";
   }
 
 body{
-    position: relative;
     padding: 0;
     margin: 0;
-    height: 910px;
     background-color: #070a10;
     font-family: 'Roboto';
     overflow-x: hidden;
-    overflow-y: hidden;
  
 }
 
-
-
 .container-pages{
     position: relative;
+    text-align: left !important;
     width: 100%;
-    height: 1000px;
-    background-color: red;
+    height: 900px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -70,16 +65,6 @@ body{
     transition: all ease-in 100ms;
 }
 
-
-.side-bar:hover{
-    width: 280px;
-}
-
-.side-bar .side-option :hover{
-    display: block;
-}
-
-
 .s-active{
   
   
@@ -104,14 +89,9 @@ ul{
     left: 35px;
     top: 15px;
     color: white;
-    z-index: -1;
+    display: none;
     transition: all ease-in 300ms;
-    cursor: pointer;
     
-}
-
-.text-option:hover{
-    display: block;
 }
 
 .text-option:hover{
@@ -211,6 +191,16 @@ ul{
     
 }
 
+
+#avatar-usr
+{
+    position: relative;
+    top: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
 #hr-v{
     width: 5px;
     height: 30px;
@@ -252,39 +242,11 @@ ul{
 
 #user-info{
     position: relative;
-    top: 0px;
-    left: 0%;
-    width: 400px;
-    height: 800px;
+    width: 25%;
     background-color: #253844;
     color: #02daff;
     font-family: 'Roboto';
-    font-size: 19px;
-    padding: 10px;
 }
-
-#data_user2{
-    position: relative;
-    width: 1100px !important;
-}
-
-#avatar-usr
-{
-    position: relative;
-    top: 10px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    transition: all ease-in 500ms;
-    cursor: pointer;
-    filter: contrast(0.9);
-}
-
-#avatar-usr:hover{
-    filter: contrast(1.55);
-    
-}
-
 .name-c{
     font-family: 'Roboto';
     font-size: 12px;
@@ -359,7 +321,7 @@ ul{
     background-color: rgb(226, 178, 19);
 }
 
-#ps2{
+.ps2{
     border: 1px solid rgb(50, 53, 206);
     color: rgb(50, 53, 206);
     background-color: #1c292f;
@@ -371,12 +333,23 @@ ul{
     filter: saturate(0);
 }
 
-#ps2:hover{    
+.ps2:hover{    
     filter: saturate(5.5);
 }
 
+.activate{
+    border: 2px solid rgb(226, 178, 19) !important;
+    color: rgb(226, 178, 19) !important;
+    background-color: #1c292f;
+    width: 120px;
+    transition: all ease-in 500ms;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    filter: saturate(1.5);
+}
 
-#xbox2{
+.xbox2{
     border: 1px solid green;
     color: green;
     background-color: #1c292f;
@@ -388,11 +361,11 @@ ul{
     filter: saturate(0);
 }
 
-#xbox2:hover{    
+.xbox2:hover{    
     filter: saturate(5.5);
 }
 
-#nintendo2{
+.nintendo2{
     border: 1px solid rgb(192, 49, 49);
     color: rgb(192, 49, 49);
     background-color: #1c292f;
@@ -404,12 +377,12 @@ ul{
     filter: saturate(0);
 }
 
-#nintendo2:hover{    
+.nintendo2:hover{    
     filter: saturate(5.5);
    
 }
 
-#pc2{
+.pc2{
     border: 1px solid rgb(163, 163, 163);
     color: rgb(165, 165, 165);
     background-color: #1c292f;
@@ -421,7 +394,7 @@ ul{
     filter: saturate(0);
 }
 
-#pc2:hover{    
+.pc2:hover{    
     filter: saturate(5.5);
     
 }
@@ -433,32 +406,28 @@ ul{
   
 }
 
-.data-record h4{
+.data-record h3{
     padding: 20px;
     width: 50%;
     font-size: 300%;
     font-family: 'Roboto';
 }
 
-.data-record h4 p{
+.data-record h3 p{
     
     width: 50%;
-    font-size: 30px !important;
+    font-size: 20px;
     font-family: 'Roboto';
 }
 
 /* RECORD */
 
-#record-info h4{
+#record-info h3{
     color: rgb(226, 178, 19) ;
-    font-family: 'Roboto';
-    font-size: 50px !important;
-    margin-left: 15px !important;
 }
 
-#record-info h4 p{
+#record-info h3 p{
     color: white;
-    font-family: 'Roboto';
 }
 
 
@@ -495,7 +464,7 @@ ul{
 #flag{
     width: 50%;
     height: 100%;
-    /*background-image: url("../img/flags/flag-fifa.png"); */
+  
     text-align: center;
     color: white;
     
@@ -546,10 +515,20 @@ ul{
     height: 40px;
     padding: 10px;
     border-bottom: 1px solid white;
+    text-align: left !important;
+}
+
+.title-edit-data2{
+    background-color: #253844;
+    color: #dbb051;
+    height: 40px;
+    padding: 10px;
+    text-align: left !important;
 }
 
 .title-edit-p{
     position: relative;
+    text-align: left !important;
     background-color: #253844;
     color: #dbb051;
     height: 40px;
@@ -562,7 +541,7 @@ ul{
     position: relative;
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 380px;
     background-color: #253844;
     padding: 20px;
 }
@@ -609,6 +588,7 @@ ul{
     padding: 20px;
     width: 50%;
     height: 100%;
+    text-align: left !important;
 }
 
 .tags-c{
@@ -628,12 +608,14 @@ ul{
 
 .edit-games-f{
     position: relative;
+    text-align: left !important;
     width: 50%;
     padding: 20px;
 }
 
 #list-games{
     position: relative;
+    text-align: left !important;
     background-color: #151e23;
     color: #dbb051;
     padding: 10px;
@@ -641,7 +623,11 @@ ul{
 
 
 .modal-body{
+    position: relative !important;
+    height: 1200px !important;
+    text-align: left !important;
     border: none; 
+
 }
 
 .modal-footer{
@@ -655,6 +641,12 @@ ul{
     width: 100%;
     height: 50px;
     padding: 10px;
+}
+
+#close-btn{
+    position: relative;
+    top: -55px;
+    left: 140px;
 }
 
 .btn-close{
@@ -678,14 +670,15 @@ ul{
     padding: 10px;
 }
 
-/* ngClass */
+/* */
 
-.win{
-    font-family: 'Roboto';
-    color: green !important;
+#ps2 input {
+    position: relative;
+    
+    background-color: none !important;
+    border: none !important;
 }
 
-.loose{
-    font-family: 'Roboto';
-    color: red !important;
-}
+
+
+/* */ 

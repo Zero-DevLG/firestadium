@@ -9,15 +9,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { ModalSignInComponent } from './shared/modal-sign-in/modal-sign-in.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { UserPageComponent } from './user-page/user-page.component';
-import { UserPageModule } from './user-page/user-page.module';
-import { SidebarModule } from 'ng-sidebar';
-import { LoobyPageComponent } from './looby-page/looby-page.component';
-import { LoobyPageModule } from './looby-page/looby-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './protected/dashboard/dashboard.component';
+import { ModalEditUsrComponent } from './shared/modal-edit-usr/modal-edit-usr.component';
+import { AlifeFileToBase64Module } from 'alife-file-to-base64'
+
+
 
 
 
@@ -29,20 +28,19 @@ import { DashboardComponent } from './protected/dashboard/dashboard.component';
     NavBarComponent,
     ModalSignInComponent,
     FooterComponent,
-    UserPageComponent,
-    LoobyPageComponent,
-    DashboardComponent
+    DashboardComponent,
+    ModalEditUsrComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     LandingPageModule,
-    LoobyPageModule,
     NgbModule,
-    SidebarModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
+    AlifeFileToBase64Module
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

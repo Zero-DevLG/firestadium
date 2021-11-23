@@ -1,0 +1,827 @@
+
+/**/
+
+@font-face {
+    font-family: 'Roboto';
+    src: "../../../assets/fonts/Roboto-Bold.ttf";
+  }
+
+
+  *{
+      font-family: 'Roboto' !important;
+  }
+
+
+  .cloak{
+      position: relative;
+      width: 100%;
+      left: 40%;
+      display: flex;
+      
+  }
+
+  #window-game{
+    box-shadow: 0 0 5px 5px rgb(226, 178, 19);
+  }
+  /*
+  .modal-dialog{
+    box-shadow: 0 0 5px 5px rgb(226, 178, 19);
+  }
+*/
+  .input-timer{
+      position: relative;
+      width: 100px;
+      background-color: none;
+      font-family: 'DS-DIGIB';
+      font-size: 50px;
+      color: rgb(226, 178, 19);
+      background-color: #0a0a0a !important;
+      text-align: center;
+      border: 1px solid rgb(226, 178, 19);
+      transition: all ease-in 300ms;
+      filter: contrast(0.2);
+
+  }
+  .timer{
+      position: relative;
+      width: 100%;
+      height: 150px;
+      text-align: center;
+      background-color: #253844;
+      border-radius: 5px;
+      padding: 5px;
+  }
+
+  .timer h5{
+    font-family: 'DS-DIGIB';
+    color: white;
+  }
+
+  .timer h2{
+
+    font-family: 'DS-DIGIB';
+    color: rgb(226, 178, 19);
+    font-size: 80px;
+    
+}
+
+
+  .timer h1{
+
+      font-family: 'DS-DIGIB';
+      color: rgb(226, 178, 19);
+      font-size: 50px;
+      
+  }
+
+/**/
+
+
+/* */
+  .pvp{
+      position: relative;
+      top: 10px;
+      display: flex;
+      width: 100%;
+      height: 370px;
+      background-color: #253844;
+      padding: 5px;
+
+
+  }
+
+  #vs
+  {
+    position: absolute;
+    left: 44%;
+    top: 25%;
+    z-index: 1;
+    transition: all ease-in 300ms;
+    cursor: pointer;
+    filter: contrast(0.2);
+  }
+
+  #vs:hover{
+      filter: contrast(1.3);
+  }
+
+
+  .p1
+  {
+    position: relative;
+    width: 50%;
+    height: 350px;
+  }
+
+  .p2
+  {
+    position: relative;
+    width: 50%;
+    height: 350px;
+  }
+
+  .username-p
+  {
+    position: relative;
+    width: 96%;
+    height: 40px;
+    background-color: black;
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .p1-info
+ {
+    position: relative;
+    top: 10px;
+    width: 96%;
+    height: 270px;
+    background-color: rgb(14, 19, 31);
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    padding: 5px;
+    overflow-y: hidden;
+    /*box-shadow: 0 0 5px 5px rgb(53, 178, 228);*/
+   
+  }
+
+  .p2-info
+  {
+    position: relative;
+    top: 10px;
+    width: 96%;
+    height: 270px;
+    background-color: rgb(14, 19, 31);
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    padding: 5px;
+    overflow-y: hidden;
+   }
+
+   #avatar-p1{
+       position: relative;
+       width: 100%;
+       height: 230px;
+       padding: 5px;
+       align-items: center;
+       text-align: center;
+       cursor: pointer;
+       transition: all ease-in 300ms;
+   }
+
+
+   #img-p1{
+        position: relative;
+        width: 250px;
+        transition: all ease-in 300ms;
+
+
+   }
+
+   .stats-p1
+   {
+        position: relative;
+        left: 27%;
+        top: 40px;
+        width:50%;
+        height: 80px;
+        display: flex;
+        background-color: #6baff2;
+        color: black;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        transition: all ease-in 300ms;
+
+   }
+
+   #avatar-p2{
+    position: relative;
+    width: 100%;
+    height: 230px;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in 300ms;
+}
+
+
+
+
+   #img-p2{
+    position: relative;
+    width: 250px;
+    transition: all ease-in 300ms;
+
+
+}
+
+
+
+   .stats-p2
+   {
+        position: relative;
+        left: 27%;
+        top: 40px;
+        width:50%;
+        height: 80px;
+        display: flex;
+        background-color: #6baff2;
+        color: black;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        transition: all ease-in 300ms;
+
+   }
+
+   .info-game
+   {
+        position: relative;
+        top: 20px;
+        width: 100%;
+        height: 250px;
+        background-color: #253844;
+        padding: 10px;
+   }
+
+   #rules-game
+   {
+       position: relative;
+       left: 0px;
+       width: 99%;
+       height: 150px;
+       text-align: center;
+       color: white;
+       font-family: 'Roboto';
+       background-color: black;
+       padding: 10px;
+       font-size: 15px;
+       overflow-y: auto;
+   }
+
+   .btn-init{
+       background-color: rgb(226, 178, 19) ;
+       color: black;
+   }
+
+   .btn-finish{
+    background-color: rgb(226, 178, 19) ;
+    color: black;
+}
+
+
+
+
+
+/**/
+
+
+.lobby-page{
+    position: relative;
+    left: 120px;
+    top: 20px;
+    width: 90%;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    
+    
+}
+
+h5{
+    
+}
+
+.tab1{
+    background-color: #292929;
+    display: flex;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    color: rgb(226, 178, 19);
+    font-size: 20px;
+    padding: 10px;
+}
+
+h6{
+    color: white;
+}
+
+.f-c{
+    position: relative;
+    top: 20px;
+    width: 30%;
+    height: 300px;
+    
+
+}
+
+.input-f{
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    bottom: 0;  
+}
+
+.f-2{
+    position: relative;
+    width: 100%;
+    height: 135px;
+    
+}
+
+.btn-party{
+    position: relative;
+    top: 15px;
+    height: 50px !important;
+    transition: all ease-in 300ms;
+}
+
+.btn-party:hover{
+    background-color: rgb(226, 178, 19);
+}
+
+.f-games{
+    border: 2px solid rgb(136, 136, 136);
+    color: rgb(136, 136, 136);
+    background-color: rgb(83, 83, 83);
+    margin: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: all ease-in 300ms;
+}
+
+.f-games:hover{
+    color: rgb(226, 178, 19);
+    border: 2px solid rgb(226, 178, 19);
+    background-color: white;
+}
+
+
+.filtros{
+    position: relative;
+    display: flex;
+    left: 0px;
+    width: 100%;
+    height: 180px;
+    padding: 20px;
+    background-color: #253844;
+
+}
+
+.table-games{
+    position: relative;
+    top: 20px;
+    font-family: 'Roboto';
+   
+    width: 100%;
+    height: 600px; 
+}
+
+.btn-u{
+    background-color: rgb(75, 124, 170);
+    color: rgb(226, 178, 19);
+    font-family: 'Roboto' !important;
+    transition: all ease-in 300ms;
+}
+
+.btn-u:hover{
+    color: white;
+    background-color: rgb(226, 178, 19);
+}
+
+.input-f2{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.input-f2::placeholder{
+    color: white;
+}
+
+.header-newG{
+    position: relative;
+    background-color: #192228;
+    align-items: center;
+    text-align: center !important;
+}
+
+
+.info-party{
+    position: relative;
+    display: flex;
+}
+
+.games-new{
+    position: relative;
+    width: 50%;
+  
+    }
+
+.img-games-n{
+    position: relative;
+    top: 10px;
+    width: 95%;
+    height: 280px;
+    background-color: #253844;
+    border-radius: 5px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.consoles-n{
+    position: relative;
+    top: 0px;
+    width: 95%;
+    height: 180px;
+    background-color: #253844;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+hr{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    color: white;
+}
+
+.list-icons{
+    position: relative;
+    top: 0px;
+    display: flex;
+    
+}
+
+.money-new{
+    position: relative;
+    width: 50%;
+    height: 470px;
+    background-color: #253844;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#number-4{
+    position: relative;
+    width: 100px;
+}
+
+.rules{
+    position: relative;
+    width: 95%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+.pay{
+    position: relative;
+    width: 95%;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+#title-modal-game{
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    color: rgb(226, 178, 19);
+
+}
+
+#number-1{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    font-family: 'Analisis' !important;
+    color: #02daff;
+}
+
+
+
+.icon-console{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    font-family: 'Roboto';
+    filter: contrast(0.25);
+    cursor: pointer;
+    transition: all ease-in 300ms;
+    overflow: hidden;
+}
+
+
+
+.icon-console:hover{
+    filter: contrast(1.2);
+    color: rgb(226, 178, 19);
+    background-color: rgb(14, 19, 31);
+    border: 1px solid rgb(226, 178, 19) ;
+}
+
+.active{
+    filter: contrast(1.2);
+    color: rgb(226, 178, 19);
+    background-color: rgb(14, 19, 31);
+    border: 1px solid rgb(226, 178, 19) ;
+}
+
+/**/
+#ps-logo{
+    position: absolute;
+    top: 0;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+#xbox-logo{
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+#nintendo-logo{
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+#pc-logo{
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 80px;
+    height: 40px;
+    filter: contrast(0.25);
+    transition: all ease-in 500ms;
+}
+
+
+/**/
+
+
+/* Carrusel games */
+  .main-carrusel{
+      position: relative;
+      width: 330px;
+      height: 180px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: flex;
+      text-align: center;
+  }  
+  .submain-carrusel{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 280px;
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+} 
+
+  .img-c{
+      position: relative;
+      top: 0;
+      left: 1px;
+      width: 80px;
+      margin: 5px;
+      transition: all ease-in 100ms;
+      filter: contrast(0.5);
+      cursor:pointer;
+  }
+
+  .img-c:hover{
+      transform: scale(1.2);
+      filter: contrast(1.1);
+  }
+
+  .activeG{
+    transform: scale(1.2);
+    filter: contrast(1.1);
+  }
+
+  #r{
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      z-index: 1;
+      width: 20px;
+      cursor: pointer;
+  }
+
+  #l{
+    position: absolute;
+      top: 50px;
+      left: 300px;
+      z-index: 1;
+      width: 20px;
+      cursor: pointer;
+}
+
+
+/*   */
+
+
+/* */ 
+.tablero{
+    position: relative;
+    display: flex;
+    top: 10px;
+    left: 20px;
+
+}
+
+
+#rest{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(31, 31, 31);
+    color: rgb(226, 178, 19);
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#number-t{
+    position: relative;
+    display: flex;
+    width: 160px;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(15, 160, 15);
+    text-align: center;
+    
+    
+}
+
+#signo{
+    position: relative;
+    text-align: center;
+    padding-top: 15px;
+    width: 40px;
+    height: 60px;
+    background-color: grey;
+    color: rgb(226, 178, 19);
+    font-size: 20px;
+}
+#valor{
+    position: relative;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(15, 160, 15);
+    font-size: 30px;
+    transition: all ease-out 500ms;
+}
+
+.input-money{
+    position: relative;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(15, 160, 15);
+    font-size: 30px;
+    border: none;
+}
+
+#sum{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(31, 31, 31);
+    color: rgb(226, 178, 19);
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/**/
+
+
+/* chat*/
+
+    #icon-chat{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        z-index: 2;
+        cursor: pointer;
+        transition: all ease-in 500ms;
+    }
+
+    #icon-chat:hover{
+        transform: scale(1.2);
+    }
+
+
+    .chat{
+        position:absolute;
+        top: 0px;
+        left: 0px;
+        width: 350px;
+        height: 805px;
+        background-color: #192228;
+        z-index: 2;
+        border-right: 1px solid rgb(226, 178, 19);
+        border-top: 1px solid rgb(226, 178, 19);
+        border-bottom: 1px solid rgb(226, 178, 19);
+        transition: all ease-in 1000ms;
+        display: none;
+    }
+
+
+    .head-chat{
+        position: relative;
+        background-color: #192228;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        font-family: 'Roboto';
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .head-chat img{
+        position: absolute;
+        top: 10px;
+        left: 70px;
+    }
+
+    .close{
+        position: absolute;
+        left: 68%;
+        top: -5px;
+        width: 60px;
+        cursor: pointer;
+        transition: all ease-in 1000ms;
+    }
+
+    .close img{
+        width: 40px;
+    }
+
+    .body-chat
+    {
+        position: relative;
+        background-color: #253844;
+        width: 92%;
+        height: 650px;
+        top: 10px;
+        left: 15px;
+        border-radius: 5px;
+        border: 3px solid rgb(51, 51, 51);
+        padding: 20px;
+
+    }
+
+    .chat-message{
+        position: relative;
+        top: 20px;
+        width: 100%;
+        font-family: 'Roboto';
+        font-size: 12px;
+    }
+
+    .chat-message input{
+        font-family: 'Roboto';
+        font-size: 12px;
+    }
+/* END */

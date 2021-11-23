@@ -1,0 +1,121 @@
+
+    
+        <div class="title-modal">
+            <h5 class="title-edit-data2">EDITAR PERFIL</h5>
+          </div>
+          <br>
+          <div class="title-edit-data">
+            <h5>> EDITAR DATOS PERSONALES</h5>
+          </div>
+            <form (submit)="submit()" [formGroup]="formUpdate">
+                    <div class="edit-data">
+                        
+                        <div class="edit-avatar">
+                            <img id="avatar-usr"   *ngIf="authService.dataUser.value.avatar != ''" [src]="this.authService.user_image" alt="">
+                            <img id="avatar-usr"   *ngIf="authService.dataUser.value.avatar == ''" src="../../../assets/img/PNG/Monito1.png" alt="">
+                           
+                            <br>
+                            <br>
+                            <input type="file" alife-file-to-base64 (onFileChanged)="onFileChanged($event)" required>
+                        </div>
+                        
+                        <div class="edit-personal-data">
+                            <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label for="name">Nombre(s):</label>
+                                    <input type="text" name="name" class="form-control" [value]="authService.dataUser.value.names" formControlName="Names">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName">Apellido(s)</label>
+                                    <input type="text" name="lastName" class="form-control" [value]="authService.dataUser.value.lastNames" formControlName="LastNames">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <label for="userName">Nombre de Usuario:</label>
+                                    <input type="text" name="userName" class="form-control" [value]="authService.dataUser.value.userName" formControlName="UserName">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" name="password" class="form-control" [value]="authService.dataUser.value.password" placeholder="Introduce una contraseña" formControlName="Password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <label for="email">Email:</label>
+                                    <input type="text" name="email" class="form-control" [value]="authService.dataUser.value.email" formControlName="Email">
+                                </div>
+                            </div>
+                            <br>
+                                <div class="row">
+                                        <div class="col-md-5">
+                                        <label for="birthDate">Fecha de nacimiento:</label>
+                                        <input type="date" name="birthDate" [value]="authService.dataUsers.value.birthDate" class="form-control" formControlName="BirthDate">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="country">Pais:</label>
+                                            <select name="country"  class="form-select" id="inputGroupSelect01" formControlName="CountryId">
+                                                <option  value="2009-01-21" selected>Elige</option> 
+                                                <option *ngFor = "let item of authService.paises" [value]="item.id">{{ item.name }}</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-edit-p">
+                        <h5>> PREFERENCIAS</h5>
+                    </div>
+                    <div class="edit-games">
+                        <div class="edit-consoles-user">
+                        <h6>Selecciona las consolas donde acostumbras jugar:</h6>
+                        <div class="row">
+                            <div class="col-md-3"> <div  class="ps2" [ngClass]="{ 'ps2': !act.ps4,'activate': act.ps4 }" (click)="getUsrPlatafomrs(authService.plataforms.ps4.id)"><h6>PS5/PS4</h6></div></div>
+                            <div class="col-md-3"> <div class="xbox2" [ngClass]="{ 'xbox2': !act.xbox,'activate': act.xbox }" (click)="getUsrPlatafomrs(authService.plataforms.xbox.id)"><h6>XBOX</h6></div></div> 
+                            <div class="col-md-3"> <div class="nintendo2" [ngClass]="{ 'nintendo2': !act.nintendo,'activate': act.nintendo }" (click)="getUsrPlatafomrs(authService.plataforms.nintendo.id)"><h6>SWITCH</h6></div></div>
+                            <div class="col-md-3"> <div class="pc2" [ngClass]="{ 'pc2': !act.pc,'activate': act.pc }" (click)="getUsrPlatafomrs(authService.plataforms.pc.id)" ><h6>PC</h6></div></div> 
+                        </div>
+                        <br>
+                        <div class="row">
+                        <h4>GAMER TAGS</h4>
+                            <div class="col-md-11 tags-c"><input  type="text" class="form-control input-tag" placeholder="XBOX GAMER TAG"></div>
+                            <div class="col-md-11 tags-c"><input  type="text" class="form-control input-tag"  placeholder="PSN USERNAME"></div>
+                            <div class="col-md-11 tags-c"><input type="text" class="form-control input-tag" placeholder="ACTIVISION USERNAME" disabled></div>
+                            <div class="col-md-11 tags-c"><input type="text" class="form-control input-tag" placeholder="EPIC GAMES USERNAME" disabled></div>
+                        </div>
+                        </div>
+                        <div class="edit-games-f">
+                            <h6>Seleccionar tus juegos preferidos:</h6>
+                            <div id="list-games">
+                                <ul style="list-style: none;">
+                                    <li ><input value="1c870bb7-fab7-4aa1-947e-47c2288d396d" (change)="addUserGame('1c870bb7-fab7-4aa1-947e-47c2288d396d')" [checked]="authService.act2.FF == true" type="checkbox" name="" id=""> FIFA 22</li>
+                                    <li ><input value="e373522c-994d-4ad0-be63-69004ecdcc4d" (change)="addUserGame('e373522c-994d-4ad0-be63-69004ecdcc4d')" [checked]="authService.act2.MADD" type="checkbox" name="" id=""> MADDEN 22</li>
+                                    <li ><input value="fb02b80a-41c9-4990-a312-2ca86fe4aac0" (change)="addUserGame('fb02b80a-41c9-4990-a312-2ca86fe4aac0')" [checked]="authService.act2.RL" type="checkbox" name="" id=""> ROCKET LEAGUE</li>
+                                    <li ><input value="9626ce4d-959f-4c19-8c08-75d5895687d3" (change)="addUserGame('9626ce4d-959f-4c19-8c08-75d5895687d3')" [checked]="authService.act2.For" type="checkbox" name="" id=""> FORTNITE</li>
+                                    <li ><input value="f0b98578-ca8a-4a05-9f3b-ebd1bf446631" (change)="addUserGame('f0b98578-ca8a-4a05-9f3b-ebd1bf446631')" [checked]="authService.act2.LoL == true" type="checkbox" name="" id=""> LEAGUE OF LEGENDS</li>
+                                    <li ><input value="1b08709c-9a60-4ae8-b079-479c0bb82c8d" (change)="addUserGame('1b08709c-9a60-4ae8-b079-479c0bb82c8d')" [checked]="authService.act2.COD_v" type="checkbox" name="" id=""> COD VANGUARD</li>
+                                    <li ><input value="0013e0e3-9493-4bb9-8324-83a71a87a87e" (change)="addUserGame('0013e0e3-9493-4bb9-8324-83a71a87a87e')" [checked]="authService.act2.COD_MW" type="checkbox" name="" id=""> COD MODERN WARFARE</li>
+                                    <li ><input value="55bb0c5c-2aed-4595-854b-467f01e60ce9" (change)="addUserGame('55bb0c5c-2aed-4595-854b-467f01e60ce9')" [checked]="authService.act2.COD_CW" type="checkbox" name="" id=""> COD COLD WAR</li>
+                                    <li ><input value="d79dc168-4fa2-4924-8a7c-31bb088ac39b" (change)="addUserGame('d79dc168-4fa2-4924-8a7c-31bb088ac39b')" [checked]="authService.act2.COD_WZ" type="checkbox" name="" id=""> COD WAR ZONE</li>
+                                    <li ><input value="41ee7175-8d8f-428f-a75e-77e939908411" (change)="addUserGame('41ee7175-8d8f-428f-a75e-77e939908411')" [checked]="authService.act2.CR" type="checkbox" name="" id=""> CLASH ROYALE</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+        
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-sm" [disabled]="formUpdate.invalid">Guardar Cambios</button>
+                   
+            </form>
+            <br>
+            <button id="close-btn" class="btn btn-danger btn-sm" (click)="close()">Salir sin guardar</button>
+  

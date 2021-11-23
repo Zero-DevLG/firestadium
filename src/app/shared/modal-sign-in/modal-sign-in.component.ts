@@ -67,14 +67,15 @@ export class ModalSignInComponent implements OnInit {
       var edad = today.getFullYear() - birthday.getFullYear();
       var m = today.getMonth() - birthday.getMonth();
 
-      if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+     /* if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
         edad--;
-    }
+    }*/
 
     if(edad > 18){
-      return date_b2.setErrors({notEquivalent: true});
-    }else{
       return date_b2.setErrors(null);
+    }else{
+     
+      return date_b2.setErrors({notEquivalent: true});
     }
 
     }
